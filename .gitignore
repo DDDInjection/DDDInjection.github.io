@@ -5,6 +5,7 @@ _site/
 
 # Hugo cache files
 resources
+public
 
 # Used to control concurrency between multiple Hugo instances
 .hugo_build.lock
