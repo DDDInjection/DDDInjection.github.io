@@ -5,6 +5,7 @@
     <title>{{ .Title }}</title>
     {{ partial "head/favicons.html" . }}
 
-    {{ $style := resources.Get "scss/main.scss" | toCSS | resources.Minify }}
+    {{ $options := (dict "targetPath" "main.css" "outputStyle" "compressed" "includePaths" (slice "node_modules")) }}
+    {{ $style := resources.Get "scss/main.scss" | toCSS $options | postCSS (dict "use" "autoprefixer") }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" crossorigin="anonymous">
 </head>
