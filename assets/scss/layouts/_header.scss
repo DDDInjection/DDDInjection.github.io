@@ -1,0 +1,7 @@
+#header {
+  position: fixed;
+  width: 100%;
+  height: $header-height;
+  background-color: $main-brand-color;
+  z-index: map_get($z-index, 'header');
+}
