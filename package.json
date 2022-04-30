@@ -1,0 +1,25 @@
+{
+  "name": "dddi",
+  "version": "1.0.0",
+  "description": "The site dddi.dev",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DDDInjection/DDDInjection.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DDDInjection/DDDInjection.github.io/issues"
+  },
+  "homepage": "https://github.com/DDDInjection/DDDInjection.github.io#readme",
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^4.1.3",
+    "autoprefixer": "^10.4.5",
+    "postcss": "^8.4.13",
+    "postcss-cli": "^9.1.0"
+  }
+}
