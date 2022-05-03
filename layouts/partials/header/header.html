@@ -16,26 +16,16 @@
                 <div class="above-mobile-scroll"></div>
                 <div class="nav-items">
                     <ul class="nav-list">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span>Палуба</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span>Судовой журнал</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span>Путеводители</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span>Кают-компания</span>
-                            </a>
-                        </li>
+                        {{ $current := . }}
+                        {{- $section := $current.Section -}}
+                        {{ range .Site.Menus.main }}
+                            {{ $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
+                            {{ $active = or $active (eq .Name $current.Title) }}
+                            {{ $active = or $active (and (eq .Name ($section | humanize)) (eq $current.Section $section)) }}
+                            <li class="nav-item">
+                                <a href="{{ .URL }}" class="{{ if $active }}active{{ end }}"><span>{{ .Name }}</span></a>
+                            </li>
+                        {{ end }}
                     </ul>
                 </div>
             </div>
