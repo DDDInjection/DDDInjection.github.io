@@ -16,14 +16,12 @@
                 <div class="above-mobile-scroll"></div>
                 <div class="nav-items">
                     <ul class="nav-list">
-                        {{ $current := . }}
-                        {{- $section := $current.Section -}}
+                        {{ $url := .URL }}
                         {{ range .Site.Menus.main }}
-                            {{ $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
-                            {{ $active = or $active (eq .Name $current.Title) }}
-                            {{ $active = or $active (and (eq .Name ($section | humanize)) (eq $current.Section $section)) }}
                             <li class="nav-item">
-                                <a href="{{ .URL }}" class="{{ if $active }}active{{ end }}"><span>{{ .Name }}</span></a>
+                                <a href="{{ .URL }}" class="{{ if eq $url .URL }}active{{ end }}">
+                                    <span>{{ .Name }}</span>
+                                </a>
                             </li>
                         {{ end }}
                     </ul>
