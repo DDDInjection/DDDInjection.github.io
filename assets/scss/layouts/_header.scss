@@ -16,7 +16,7 @@
   }
 
   #header {
-    .navigation-holder {
+    .nav-items-holder {
       right: 0;
     }
   }
@@ -51,7 +51,7 @@
       display: block;
       position: fixed;
       top: 0;
-      right: 0;
+      right: -($mobile-nav-width + 16px);
       width: $mobile-nav-width;
       height: 100vh;
       padding: $mobile-nav-vertical-padding 0;
@@ -129,11 +129,15 @@ $menu-icon-position: ($header-height - $menu-icon-size)/2;
   display: none;
   right: 0;
   margin-top: $menu-icon-position;
-  margin-right: $menu-icon-position;
+  margin-right: $menu-icon-position + 8px;
   position: absolute;
 
   @include breakpoint(tablet) {
     display: block;
+  }
+
+  @include breakpoint(md-phone) {
+    margin-right: $menu-icon-position;
   }
 
   #menu-icon {
