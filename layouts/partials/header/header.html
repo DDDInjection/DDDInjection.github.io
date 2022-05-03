@@ -16,13 +16,10 @@
                 <div class="above-mobile-scroll"></div>
                 <div class="nav-items">
                     <ul class="nav-list">
-                        {{ $url := .URL }}
+                        {{ $currentPage := . }}
                         {{ range .Site.Menus.main }}
-                            <!--TODO:2022-05-03:juliaevseeva: `Page.URL` will be deprecated soon.
-                            Investigate why the `HasMenuCurrent` and `IsMenuCurrent` properties
-                            don't work. See the known issue https://discourse.gohugo.io/t/ismenucurrent-returns-false-for-single-pages/13970-->
                             <li class="nav-item">
-                                <a href="{{ .URL | relURL }}" class="{{ if eq $url .URL }}active{{ end }}">
+                                <a href="{{ .URL | relURL }}" class="{{ if eq $currentPage.RelPermalink .URL }}active{{ end }}">
                                     <span>{{ .Name }}</span>
                                 </a>
                             </li>
