@@ -22,7 +22,7 @@
                             Investigate why the `HasMenuCurrent` and `IsMenuCurrent` properties
                             don't work. See the known issue https://discourse.gohugo.io/t/ismenucurrent-returns-false-for-single-pages/13970-->
                             <li class="nav-item">
-                                <a href="{{ .URL }}" class="{{ if eq $url .URL }}active{{ end }}">
+                                <a href="{{ .URL | relURL }}" class="{{ if eq $url .URL }}active{{ end }}">
                                     <span>{{ .Name }}</span>
                                 </a>
                             </li>
