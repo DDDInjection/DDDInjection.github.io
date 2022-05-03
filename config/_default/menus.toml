@@ -5,12 +5,12 @@
 
 [[main]]
   name = "Судовой журнал"
-  url = "/logbook"
+  url = "/logbook/"
   weight = 2
 
 [[main]]
   name = "Путеводители"
-  url = "/resources"
+  url = "/resources/"
   weight = 3
 
 [[main]]
