@@ -1,0 +1,16 @@
+/* Fonts */
+$main-font: 'PT Sans', Helvetica, Arial, sans-serif;
+
+/* Layout */
+$content-max-width: 1260px;
+$content-padding-medium: 40px;
+$content-padding-tablet: 32px;
+$content-padding-phone: 20px;
+$header-height: 64px;
+
+/* Z-index
+Usage: z-index: map_get($z-index, 'header'); */
+$z-index: (
+        'header'            : 1000,
+        'nav-mobile'        : 1001,
+);

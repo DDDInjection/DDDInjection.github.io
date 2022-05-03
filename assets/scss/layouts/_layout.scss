@@ -1,0 +1,43 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: $main-font;
+  color: $text-color;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.footer {
+  flex-shrink: 0;
+}
+
+.content-holder {
+  width: 100%;
+  max-width: $content-max-width;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $content-padding-medium;
+  padding-left: $content-padding-medium;
+
+  @include breakpoint(tablet) {
+    padding-right: $content-padding-tablet;
+    padding-left: $content-padding-tablet;
+  }
+
+  @include breakpoint(md-phone) {
+    padding-right: $content-padding-phone;
+    padding-left: $content-padding-phone;
+  }
+}

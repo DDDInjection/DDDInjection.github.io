@@ -1,4 +1,21 @@
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
+# Hugo cache files
+resources
+public
+
+node_modules
+
+# Used to control concurrency between multiple Hugo instances
+.hugo_build.lock
+
+# IntelliJ IDEA modules and interim config files
+*.iml
+.idea/*.xml
+.idea/.name
+.idea/artifacts
+.idea/libraries
+.idea/modules
+.idea/shelf
+
+!.idea/misc.xml
+!.idea/codeStyles/
+!.idea/copyright/
