@@ -28,6 +28,11 @@ a {
   color: $text-color;
 }
 
+p {
+  font-size: $font-size;
+  line-height: 1.5;
+}
+
 h1 {
   font-size: $font-size-xxl;
   color: $main-brand-color;
