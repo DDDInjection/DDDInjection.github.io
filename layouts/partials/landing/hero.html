@@ -1,0 +1,11 @@
+<div class="hero">
+    <div class="content-holder hero-content">
+        {{ with resources.Get "images/hero/dddi-hero-logo.webp" }}
+            <img class="hero-image"
+                 src="{{ .RelPermalink }}"
+                 width="640"
+                 height="244"
+                 alt="Domain-Driven Design">
+        {{ end }}
+    </div>
+</div>
