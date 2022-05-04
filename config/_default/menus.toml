@@ -18,3 +18,17 @@
   url = "https://messroom.dddi.dev/"
   weight = 4
 
+[[social]]
+  name = "Telegram"
+  url = "https://t.me/DDDInjection"
+  weight = 1
+
+[[social]]
+  name = "Twitter"
+  url = "https://twitter.com/DDDInjection"
+  weight = 2
+
+[[social]]
+  name = "Meetup"
+  url = "https://www.meetup.com/Domain-Driven-Design-Injection"
+  weight = 3

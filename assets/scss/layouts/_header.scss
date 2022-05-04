@@ -31,6 +31,7 @@
     margin-bottom: 4px;
 
     a {
+      text-decoration: none;
       font-size: $font-size-md;
       font-weight: 700;
       color: white;
@@ -92,6 +93,7 @@
 
         a {
           display: block;
+          text-decoration: none;
           font-size: $font-size;
           font-weight: 700;
           color: white;

@@ -1,6 +1,7 @@
 # DDDInjection.github.io
 This repository contains the code of the [dddi.dev](https://dddi.dev/). 
-It is based on [Hugo](https://gohugo.io/).
+It is based on [Hugo](https://gohugo.io/) and is hosted on 
+[GitHub Pages](https://pages.github.com/).
 
 # Prerequisites
 - The application uses 14.x.x version of [Node.js](https://nodejs.org/en/).

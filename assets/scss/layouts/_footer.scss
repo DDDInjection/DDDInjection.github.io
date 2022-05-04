@@ -1,0 +1,89 @@
+/*!
+ * Copyright 2022, TeamDev. All rights reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Redistribution and use in source and/or binary forms, with or without
+ * modification, must retain the above copyright notice and the following
+ * disclaimer.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ * A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ * OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+footer {
+  background-color: $main-brand-color;
+
+  .footer-content {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 0 64px;
+
+    @include breakpoint(lg-phone) {
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 16px;
+
+      .col {
+        max-width: 100%;
+        padding-bottom: 40px;
+      }
+    }
+  }
+
+  .col {
+    position: relative;
+    width: 100%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    text-align: center;
+
+    .title {
+      padding: 20px 0 14px;
+      color: white;
+    }
+
+    p {
+      padding-bottom: 12px;
+    }
+
+    a {
+      color: rgba(white, .8);
+      transition: $transition-primary;
+      text-decoration: none;
+      padding-bottom: 2px;
+      border-bottom: 1px solid transparent;
+
+      &:hover {
+        color: white;
+        border-bottom-color: white;
+      }
+    }
+  }
+
+  .copyright {
+    background-color: $text-color;
+    color: rgba(white, .7);
+    font-size: $font-size-sm;
+    padding: 24px;
+    text-align: center;
+
+    a {
+      color: white;
+    }
+  }
+}

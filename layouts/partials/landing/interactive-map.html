@@ -1,0 +1,148 @@
+<!--
+  ~ Copyright 2022, TeamDev. All rights reserved.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Redistribution and use in source and/or binary forms, with or without
+  ~ modification, must retain the above copyright notice and the following
+  ~ disclaimer.
+  ~
+  ~ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  ~ "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  ~ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  ~ A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  ~ OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  ~ SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  ~ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  ~ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  ~ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  ~ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  ~ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+<div class="map-content-holder">
+    <div class="slider-navigation">
+        <div class="ribbon">
+            <picture>
+                <source media="(min-width: 987px)" srcset="/interactive-map/header-ribbon.svg">
+                <source media="(min-width: 641px)" srcset="/interactive-map/header-ribbon-mobile.svg">
+                <img src="/interactive-map/header-ribbon-mobile-small.svg" alt="Header ribbon">
+            </picture>
+        </div>
+        <div class="globe-container">
+            <div class="globe">
+                <div class="globe-map">
+                    <div class="owl-carousel">
+                        <img src="/interactive-map/globe-map-1.png" alt="map">
+                        <img src="/interactive-map/globe-map-2.png" alt="map">
+                    </div>
+                </div>
+                <div class="rotated-meridians">
+                    <div class="meridian-1"></div>
+                    <div class="meridian-2"></div>
+                    <div class="meridian-3"></div>
+                    <div class="meridian-4"></div>
+                    <div class="meridian-5"></div>
+                </div>
+                <img src="/interactive-map/horizontal-meridians.svg"
+                     class="horizontal-meridians"
+                     alt="Horizontal meridians">
+                <div class="meridian-0"></div>
+            </div>
+        </div>
+        <div class="button-container">
+            <div class="nav-buttons clearfix">
+                <a href="#" id="nav_prev" class="disabled">
+                    <img src="/interactive-map/left-hand.svg" alt="Left hand">
+                </a>
+                <a href="#" id="nav_next">
+                    <img src="/interactive-map/right-hand.svg" alt="Right hand">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="slider-container">
+        <div class="owl-carousel">
+            <div class="map-wrapper">
+                <iframe src="/interactive-map/map-1.html"
+                        class="map"
+                        width="100%"
+                        allowfullscreen
+                        frameBorder="0"
+                        title="DDDi Map Season 1">
+                </iframe>
+            </div>
+            <div class="map-wrapper">
+                <iframe src="/interactive-map/map-2.html"
+                        class="map"
+                        width="100%"
+                        allowfullscreen
+                        frameBorder="0"
+                        title="DDDi Map Season 2">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        const $owl = $('.owl-carousel');
+        const $rotatedMeridians = $('.rotated-meridians');
+        const $btnPrev = $('#nav_prev');
+        const $btnNext = $('#nav_next');
+
+        $owl.owlCarousel({
+            loop: false,
+            nav: false,
+            dots: false,
+            smartSpeed: 600,
+            responsive: {
+                0: {
+                    items: 1,
+                }
+            },
+            onTranslated: (event) => onTranslated(event),
+        });
+
+        $btnPrev.click(function() {
+            $owl.trigger('prev.owl.carousel');
+            $btnPrev.addClass('not-clickable');
+            rotateMeridians($rotatedMeridians, 'rotate-backward');
+            return false; // Prevents from scrolling top.
+        });
+
+        $btnNext.click(function() {
+            $owl.trigger('next.owl.carousel');
+            $btnNext.addClass('not-clickable');
+            rotateMeridians($rotatedMeridians, 'rotate-forward');
+            return false; // Prevents from scrolling top.
+        });
+
+        function rotateMeridians(el, className) {
+            el.addClass(className);
+            el.one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(event) {
+                $(this).removeClass(className);
+            });
+        }
+
+        function onTranslated(event) {
+            $btnPrev.removeClass('disabled not-clickable');
+            $btnNext.removeClass('disabled not-clickable');
+            if (event.item.index === 0) {
+                $btnPrev.addClass('disabled');
+            }
+            if (event.item.index === event.item.count - 1) {
+                $btnNext.addClass('disabled');
+            }
+        }
+    });
+</script>
