@@ -24,19 +24,66 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-a {
-  color: $text-color;
-}
+footer {
+  background-color: $main-brand-color;
 
-h1 {
-  font-size: $font-size-xxl;
-  color: $main-brand-color;
-  font-weight: 700;
-  padding-top: 16px;
-  margin-bottom: 32px;
-}
+  .footer-content {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 0 64px;
 
-h3 {
-  font-size: $font-size-md;
-  font-weight: 700;
+    @include breakpoint(lg-phone) {
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 16px;
+
+      .col {
+        max-width: 100%;
+        padding-bottom: 40px;
+      }
+    }
+  }
+
+  .col {
+    position: relative;
+    width: 100%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    text-align: center;
+
+    .title {
+      padding: 20px 0 14px;
+      color: white;
+    }
+
+    p {
+      padding-bottom: 12px;
+    }
+
+    a {
+      color: rgba(white, .8);
+      transition: $transition-primary;
+      text-decoration: none;
+      padding-bottom: 2px;
+      border-bottom: 1px solid transparent;
+
+      &:hover {
+        color: white;
+        border-bottom-color: white;
+      }
+    }
+  }
+
+  .copyright {
+    background-color: $text-color;
+    color: rgba(white, .7);
+    font-size: $font-size-sm;
+    padding: 24px;
+    text-align: center;
+
+    a {
+      color: white;
+    }
+  }
 }
