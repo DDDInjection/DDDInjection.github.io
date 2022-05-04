@@ -1,7 +1,1 @@
 email = 'dddi@teamdev.com'
-
-## Open Graph
-images = ["doks.png"]
-ogLocale = "en_US"
-domainTLD = "doks.netlify.app"
-titleHome = "Doks Theme"
