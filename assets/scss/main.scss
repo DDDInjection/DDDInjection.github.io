@@ -2,9 +2,11 @@
 @import "common/mixins";
 @import "common/colors";
 @import "common/reset";
+@import "common/texts";
 
 @import "layouts/layout";
 @import "layouts/header";
 
 @import "components/hero";
 @import "components/interactive-map";
+@import "components/what-is-dddi";
