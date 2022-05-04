@@ -39,9 +39,9 @@
                     <img alt="Organizers icon" height="64" src="{{ .RelPermalink }}" width="64">
                 {{ end }}
                 <h3 class="title">Анонсы</h3>
-                <p><a href="">Telegram</a></p>
-                <p><a href="">Twitter</a></p>
-                <p><a href="">Meetup</a></p>
+                {{ range .Site.Menus.social -}}
+                    <p><a href="{{ .URL | relURL }}" target="_blank">{{ .Name }}</a></p>
+                {{ end -}}
             </div>
             <div class="col forum">
                 {{ with resources.Get "images/footer/icon-semaphore.svg" }}
