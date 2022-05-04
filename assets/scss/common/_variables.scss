@@ -1,6 +1,10 @@
 /* Fonts */
 $main-font: 'PT Sans', Helvetica, Arial, sans-serif;
 
+$font-size-sm: 14px;
+$font-size: 16px;
+$font-size-md: 24px;
+
 /* Layout */
 $content-max-width: 1260px;
 $content-padding-medium: 40px;
@@ -13,4 +17,11 @@ Usage: z-index: map_get($z-index, 'header'); */
 $z-index: (
         'header'            : 1000,
         'nav-mobile'        : 1001,
+        'hamburger-menu'    : 9999,
 );
+
+/* Border-radius */
+$border-radius-s: 2px;
+
+/* Transition */
+$transition-primary: all .3s ease-in-out;

@@ -1,0 +1,20 @@
+[[main]]
+  name = "Палуба"
+  url = "/"
+  weight = 1
+
+[[main]]
+  name = "Судовой журнал"
+  url = "/logbook/"
+  weight = 2
+
+[[main]]
+  name = "Путеводители"
+  url = "/resources/"
+  weight = 3
+
+[[main]]
+  name = "Кают-компания"
+  url = "https://messroom.dddi.dev/"
+  weight = 4
+
