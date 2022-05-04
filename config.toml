@@ -1,6 +1,3 @@
 baseURL = 'https://dddinjection.github.io/'
 languageCode = 'en-us'
 title = 'Domain-Driven Design Injection'
-
-[params]
-  email = 'dddi@teamdev.com'
