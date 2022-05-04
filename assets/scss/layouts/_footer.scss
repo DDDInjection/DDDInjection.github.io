@@ -60,30 +60,35 @@ footer {
     p {
       padding-bottom: 12px;
     }
-
-    a {
-      color: rgba(white, .8);
-      transition: $transition-primary;
-      text-decoration: none;
-      padding-bottom: 2px;
-      border-bottom: 1px solid transparent;
-
-      &:hover {
-        color: white;
-        border-bottom-color: white;
-      }
-    }
   }
 
   .copyright {
     background-color: $text-color;
-    color: rgba(white, .7);
+    color: rgba(white, .8);
     font-size: $font-size-sm;
     padding: 24px;
     text-align: center;
 
+    p, a {
+      color: rgba(white, .6);
+      font-size: $font-size-sm;
+    }
+
     a {
+      border-bottom-color: rgba(white, .3);
+    }
+  }
+
+  a {
+    color: rgba(white, .8);
+    transition: $transition-primary;
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
       color: white;
+      border-bottom-color: white;
     }
   }
 }
