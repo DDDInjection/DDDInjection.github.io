@@ -26,7 +26,7 @@
 
 .hero {
   background-color: $main-brand-color;
-  padding: $header-height + 16px 0 40px;
+  padding: $header-height 0 40px;
 
   @include breakpoint(md-phone) {
     height: 100vh;
@@ -38,8 +38,11 @@
     justify-content: center;
 
     .hero-image {
+      width: 640px;
+
       @include breakpoint(md-phone) {
         margin-top: 40%;
+        max-width: 480px;
       }
     }
   }
