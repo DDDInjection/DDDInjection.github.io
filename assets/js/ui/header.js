@@ -27,15 +27,8 @@
 'use strict';
 
 export function header() {
-    openHeaderMenuOnMobile();
-}
-
-/**
- * Opens header menu on mobile device.
- */
-function openHeaderMenuOnMobile() {
-    $('#menu-icon').click(function(){
-        $(this).toggleClass('open');
-        $('body').toggleClass('navigation-opened');
-    });
+    document.getElementById('menu-icon').addEventListener('click', function (e) {
+        e.currentTarget.classList.toggle('open');
+        document.body.classList.toggle("navigation-opened");
+    }, false);
 }

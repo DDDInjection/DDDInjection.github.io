@@ -26,6 +26,6 @@
 
 import { header } from './ui/header';
 
-$(function () {
+window.onload = function() {
     header();
-});
+};
