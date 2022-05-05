@@ -1,0 +1,20 @@
+{{ define "main" }}
+<div class="content-holder">
+    <div class="meetup-title">
+        <h1>{{ .Title }}</h1>
+        <p class="date">{{ .Params.date_ru }}</p>
+    </div>
+    {{ range .Pages.ByWeight }}
+        <div class="meetup-container">
+            <div class="author">
+                <p>{{ .Params.author }}</p>
+                <h3>{{ .Title }}</h3>
+                <p>{{ .Params.subtitle }}</p>
+            </div>
+            <div class="meetup-content">
+                {{ .Content }}
+            </div>
+        </div>
+    {{ end }}
+</div>
+{{ end }}
