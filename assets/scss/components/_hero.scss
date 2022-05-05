@@ -42,7 +42,8 @@
 
       @include breakpoint(md-phone) {
         margin-top: 40%;
-        max-width: 480px;
+        height: 224px;
+        object-fit: cover;
       }
     }
   }
