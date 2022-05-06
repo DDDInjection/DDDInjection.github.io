@@ -33,6 +33,10 @@
     .title {
       font-weight: 400;
       text-align: center;
+
+      @include breakpoint(md-phone) {
+        text-align: left;
+      }
     }
   }
 }
