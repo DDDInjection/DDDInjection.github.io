@@ -6,3 +6,12 @@ author:
   photo: tymchenko.png
 weight: 2
 ---
+
+{{< youtube id="MUSPIfiYzBY" title="Вавилонская башня" >}}
+{{< presentation "Презентация" "https://drive.google.com/file/d/1ZrEKY9P7VCVbputdhhK1erETN-ccoQcs/view?usp=sharing" >}}
+
+### Материалы по теме
+
+#### Книги
+
+- [Alberto Brandolini "Introducing EventStorming"](https://www.eventstorming.com/book/)
