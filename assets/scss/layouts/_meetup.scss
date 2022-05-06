@@ -13,11 +13,13 @@
 
   .meetup-container {
     max-width: 640px;
-    margin: 48px auto 0;
+    margin: 0 auto;
+    padding-top: 64px;
   }
 
   .author {
     display: flex;
+    margin-bottom: 40px;
 
     .photo {
       margin-right: 8px;
@@ -28,5 +30,18 @@
         margin-bottom: 2px;
       }
     }
+  }
+
+  ul, ol {
+    padding-left: 16px;
+
+    li {
+      line-height: 1.5;
+      padding-bottom: 16px;
+    }
+  }
+
+  p, li {
+    font-size: $font-size-neutral;
   }
 }
