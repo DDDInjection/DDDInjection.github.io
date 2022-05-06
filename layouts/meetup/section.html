@@ -12,9 +12,9 @@
                     {{ $photo_path := path.Join "images/logbook/authors/" .Params.author.photo }}
                     {{ with resources.Get $photo_path }}
                         <img alt="{{ $author_name }}"
+                             src="{{ .RelPermalink }}"
                              class="photo"
                              height="84"
-                             src="{{ .RelPermalink }}"
                              width="84">
                     {{ end }}
                 </div>
