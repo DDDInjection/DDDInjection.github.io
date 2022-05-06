@@ -42,5 +42,6 @@ body {
 }
 
 .page-content {
-  padding: $header-height + 40px 0;
+  padding-top: $header-height + 40px;
+  padding-bottom: $header-height;
 }
