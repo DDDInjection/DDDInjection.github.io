@@ -1,5 +1,5 @@
 {{ define "main" }}
-<div class="content-holder page-content">
+<div class="content-holder page-content meetup">
     <div class="meetup-title">
         <h1>{{ .Title }}</h1>
         <p class="date">{{ .Params.date_ru }}</p>
@@ -7,9 +7,22 @@
     {{ range .Pages.ByWeight }}
         <div class="meetup-container">
             <div class="author">
-                <p>{{ .Params.author }}</p>
-                <h3>{{ .Title }}</h3>
-                <p>{{ .Params.subtitle }}</p>
+                <div class="photo">
+                    {{ $author_name := .Params.author.name }}
+                    {{ $photo_path := path.Join "images/logbook/authors/" .Params.author.photo }}
+                    {{ with resources.Get $photo_path }}
+                        <img alt="{{ $author_name }}"
+                             class="photo"
+                             height="84"
+                             src="{{ .RelPermalink }}"
+                             width="84">
+                    {{ end }}
+                </div>
+                <div class="info">
+                    <p class="name"><b>{{ $author_name }}</b></p>
+                    <h2>{{ .Title }}</h2>
+                    <p class="subtitle">{{ .Params.subtitle }}</p>
+                </div>
             </div>
             <div class="meetup-content">
                 {{ .Content }}

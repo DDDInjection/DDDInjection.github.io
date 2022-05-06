@@ -1,0 +1,32 @@
+.meetup {
+  .meetup-title {
+    text-align: center;
+
+    h1 {
+      margin-bottom: 4px;
+    }
+
+    .date {
+      color: $light-gray;
+    }
+  }
+
+  .meetup-container {
+    max-width: 640px;
+    margin: 48px auto 0;
+  }
+
+  .author {
+    display: flex;
+
+    .photo {
+      margin-right: 8px;
+    }
+
+    .info {
+      h2 {
+        margin-bottom: 2px;
+      }
+    }
+  }
+}
