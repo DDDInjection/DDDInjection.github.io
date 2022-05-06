@@ -2,5 +2,24 @@
 <div class="content-holder page-content">
     <h1>{{ .Title }}</h1>
     <p>{{ .Params.subtitle }}</p>
+    {{ if (eq .Title "Судовой журнал") }}
+        <div class="meetup-list">
+            {{ range .Sections.ByTitle }}
+                <div>
+                    <a href="{{ .RelPermalink }}">
+                        <p>{{ .Title }}</p>
+                        <p>{{ .Params.date_ru }}</p>
+                    </a>
+                    {{ partial "meetup/recursive.html" . }}
+                </div>
+            {{ end }}
+        </div>
+    {{ else }}
+        <div class="meetup-list">
+            {{ range .RegularPages }}
+                <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+            {{ end }}
+        </div>
+    {{ end }}
 </div>
 {{ end }}
