@@ -1,0 +1,28 @@
+.presentation-link {
+  display: inline-block;
+  margin: 24px 0 16px;
+  color: $link-color;
+  font-weight: 700;
+  text-decoration: none;
+
+  span {
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+    transition: color .2s ease-in-out;
+  }
+
+  &:hover {
+    span {
+      border-bottom-color: $link-color;
+    }
+  }
+
+  .icon {
+    display: inline-block;
+    background: url("/images/icons/pdf.svg") no-repeat center/cover;
+    width: $icon-size-s;
+    height: $icon-size-s;
+    vertical-align: middle;
+    margin-right: 6px;
+  }
+}
