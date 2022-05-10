@@ -3,7 +3,9 @@ $main-font: 'PT Sans', Helvetica, Arial, sans-serif;
 
 $font-size-sm: 14px;
 $font-size: 16px;
+$font-size-neutral: 18px;
 $font-size-md: 24px;
+$font-size-lg: 32px;
 $font-size-xxl: 40px;
 
 /* Layout */
@@ -26,3 +28,6 @@ $border-radius-s: 2px;
 
 /* Transition */
 $transition-primary: all .3s ease-in-out;
+
+/* Icon sizes */
+$icon-size-s: 24px;

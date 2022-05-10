@@ -28,20 +28,63 @@ a {
   color: $text-color;
 }
 
+a.external-link {
+  &:after {
+    content: '\2192';
+    display: inline-block;
+    font-size: $font-size;
+    margin-left: 2px;
+    font-weight: 300;
+    left: 100%;
+    top: 4px;
+    width: 8px;
+    height: 8px;
+    overflow: hidden;
+    text-align: right;
+    line-height: 6px;
+    text-indent: -11px;
+    opacity: .7;
+    transform: rotate(-45deg);
+    transition: opacity .16s ease-in;
+    vertical-align: super;
+    text-decoration: none;
+  }
+}
+
 p {
   font-size: $font-size;
   line-height: 1.5;
 }
 
+strong {
+  font-weight: 700;
+}
+
 h1 {
   font-size: $font-size-xxl;
   color: $main-brand-color;
+  line-height: 1.2;
   font-weight: 700;
   padding-top: 16px;
   margin-bottom: 32px;
 }
 
+h2 {
+  font-size: $font-size-lg;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
 h3 {
   font-size: $font-size-md;
   font-weight: 700;
+  padding-top: 40px;
+  margin-bottom: 16px;
+}
+
+h4 {
+  font-size: $font-size-neutral;
+  font-weight: 700;
+  padding-top: 16px;
+  margin-bottom: 16px;
 }

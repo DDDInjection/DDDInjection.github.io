@@ -18,8 +18,10 @@
                     <ul class="nav-list">
                         {{ $currentPage := . }}
                         {{ range .Site.Menus.main }}
+                            {{ $isActive := or (eq $currentPage.RelPermalink .URL) }}
+                            {{ $isActive = or $isActive (and (eq .Name "Судовой журнал") (eq $currentPage.Section "logbook")) }}
                             <li class="nav-item">
-                                <a href="{{ .URL | relURL }}" class="{{ if eq $currentPage.RelPermalink .URL }}active{{ end }}">
+                                <a class="{{ if $isActive }}active{{ end }}" href="{{ .URL | relURL }}">
                                     <span>{{ .Name }}</span>
                                 </a>
                             </li>

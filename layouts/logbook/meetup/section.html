@@ -1,0 +1,33 @@
+{{ define "main" }}
+<div class="content-holder page-content meetup">
+    <div class="page-header">
+        <h1>{{ .Title }}</h1>
+        <p class="date">{{ .Params.date_ru }}</p>
+    </div>
+    {{ range .Pages.ByWeight }}
+        <div class="meetup-container" id="{{ .File.BaseFileName }}">
+            <div class="author">
+                <div class="photo">
+                    {{ $author_name := .Params.author.name }}
+                    {{ $photo_path := path.Join "images/logbook/authors/" .Params.author.photo }}
+                    {{ with resources.Get $photo_path }}
+                        <img alt="{{ $author_name }}"
+                             src="{{ .RelPermalink }}"
+                             class="photo"
+                             height="84"
+                             width="84">
+                    {{ end }}
+                </div>
+                <div class="info">
+                    <p class="name"><b>{{ $author_name }}</b></p>
+                    <h2>{{ .Title }}</h2>
+                    <p class="subtitle">{{ .Params.subtitle }}</p>
+                </div>
+            </div>
+            <div class="meetup-content">
+                {{ .Content }}
+            </div>
+        </div>
+    {{ end }}
+</div>
+{{ end }}

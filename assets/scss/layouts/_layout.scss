@@ -40,3 +40,8 @@ body {
     padding-left: $content-padding-phone;
   }
 }
+
+.page-content {
+  padding-top: $header-height + 40px;
+  padding-bottom: $header-height;
+}

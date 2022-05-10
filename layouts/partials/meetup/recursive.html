@@ -1,0 +1,10 @@
+{{ $child_pages := union .Sections .Pages }}
+<div class="card-items">
+    {{ range $child_pages.ByWeight }}
+        <div class="card-item">
+            {{ $href := printf "%s%s%s" .File.Dir "#" .File.BaseFileName}}
+            <a class="title" href="{{ $href | relURL }}">{{ .Title }}</a>
+            <p class="subtitle">{{ .Params.subtitle }}</p>
+        </div>
+    {{ end }}
+</div>

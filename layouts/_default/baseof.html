@@ -4,6 +4,7 @@
 <body>
     <div class="wrapper">
         <div class="main">
+            {{ partial "header/header.html" . }}
             {{ block "main" . }}{{ end }}
         </div>
         {{ partial "footer/footer.html" . }}
