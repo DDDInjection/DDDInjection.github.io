@@ -8,7 +8,7 @@ weight: 1
 ---
 
 {{< youtube id="PyBJqnO5wl0" title="Основано на реальных событиях" >}}
-{{< presentation "Презентация" "https://drive.google.com/file/d/1YwB57WF3UhRE9DsDDLQ7thv7Ze0WQVrs/view?usp=sharing" >}}
+{{< presentation name="Презентация" url="https://drive.google.com/file/d/1YwB57WF3UhRE9DsDDLQ7thv7Ze0WQVrs/view?usp=sharing" >}}
 
 ### Материалы по теме
 

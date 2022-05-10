@@ -8,7 +8,7 @@ weight: 2
 ---
 
 {{< youtube id="MUSPIfiYzBY" title="Вавилонская башня" >}}
-{{< presentation "Презентация" "https://drive.google.com/file/d/1ZrEKY9P7VCVbputdhhK1erETN-ccoQcs/view?usp=sharing" >}}
+{{< presentation name="Презентация" url="https://drive.google.com/file/d/1ZrEKY9P7VCVbputdhhK1erETN-ccoQcs/view?usp=sharing" >}}
 
 ### Материалы по теме
 

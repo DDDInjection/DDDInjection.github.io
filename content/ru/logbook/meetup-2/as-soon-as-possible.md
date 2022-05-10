@@ -8,7 +8,7 @@ weight: 2
 ---
 
 {{< youtube id="BM7IKXOOGUU" title="Как только — так сразу" >}}
-{{< presentation "Презентация" "https://drive.google.com/file/d/15H2rn65C13YASEBpyWBLnzScnV8c2ofZ/view?usp=sharing" >}}
+{{< presentation name="Презентация" url="https://drive.google.com/file/d/15H2rn65C13YASEBpyWBLnzScnV8c2ofZ/view?usp=sharing" >}}
 
 ### Материалы по теме
 
