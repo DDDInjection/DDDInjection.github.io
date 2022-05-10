@@ -1,7 +1,12 @@
 {{ define "main" }}
-<div class="content-holder page-content">
-    <h1>{{ .Title }}</h1>
-    <p>{{ .Params.subtitle }}</p>
+<div class="content-holder page-content logbook">
+    <div class="page-header">
+        {{ with resources.Get "images/logbook/logbook-header.svg" }}
+            <img alt="Logbook" height="177" src="{{ .RelPermalink }}" width="260">
+        {{ end }}
+        <h1>{{ .Title }}</h1>
+        <p class="subtitle">{{ .Params.subtitle }}</p>
+    </div>
     {{ if (eq .Title "Судовой журнал") }}
         <div class="meetup-list">
             {{ range .Sections.ByTitle }}
