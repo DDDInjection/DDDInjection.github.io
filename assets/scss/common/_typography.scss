@@ -28,6 +28,31 @@ a {
   color: $text-color;
 }
 
+.external-link {
+  margin-right: 8px;
+  position: relative;
+  display: inline-block;
+
+  &:after {
+    content: '\2192';
+    position: absolute;
+    font-size: $font-size;
+    font-weight: 300;
+    left: 100%;
+    top: 4px;
+    width: 8px;
+    height: 8px;
+    overflow: hidden;
+    text-align: right;
+    line-height: 6px;
+    text-indent: -11px;
+    margin: 0;
+    opacity: .7;
+    transform: rotate(-45deg);
+    transition: opacity .16s ease-in;
+  }
+}
+
 p {
   font-size: $font-size;
   line-height: 1.5;
