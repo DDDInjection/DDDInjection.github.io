@@ -10,10 +10,11 @@
     {{ if (eq .Title "Судовой журнал") }}
         <div class="meetup-list">
             {{ range .Sections.ByTitle }}
-                <div>
-                    <a href="{{ .RelPermalink }}">
-                        <p>{{ .Title }}</p>
-                        <p>{{ .Params.date_ru }}</p>
+                <div class="list-card">
+                    <a class="card-header" href="{{ .RelPermalink }}">
+                        <h3 class="title">{{ .Title }}</h3>
+                        <p class="date">{{ .Params.date_ru }}</p>
+                        <i class="arrow-icon"></i>
                     </a>
                     {{ partial "meetup/recursive.html" . }}
                 </div>

@@ -1,0 +1,64 @@
+.list-card {
+  $side-padding: 24px;
+  .card-header {
+    position: relative;
+    display: block;
+    padding: 8px $side-padding;
+    background-color: $gray-bg;
+    text-decoration: none;
+    border-radius: $border-radius-s;
+    transition: $transition-primary;
+
+    &:hover {
+      background-color: $gray-bg-darker;
+
+      .arrow-icon {
+        transform: translate(8px, -50%);
+      }
+    }
+
+    .title {
+      padding: 0;
+      margin: 0;
+      color: $main-brand-color;
+    }
+
+    .date {
+      color: $light-gray;
+    }
+
+    .arrow-icon {
+      position: absolute;
+      display: inline-block;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: url("/images/icons/arrow.svg") no-repeat center/cover;
+      width: $icon-size-s;
+      height: $icon-size-s;
+      vertical-align: middle;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  $card-bottom-margin: 24px;
+  .card-items {
+    padding: $side-padding $side-padding $card-bottom-margin - 8;
+
+    .card-item {
+      margin-bottom: $card-bottom-margin;
+
+      .title {
+        display: inline-block;
+        font-size: $font-size-neutral + 2;
+        color: $main-brand-color;
+        font-weight: 700;
+        margin-bottom: 2px;
+      }
+
+      .subtitle {
+        cursor: default;
+      }
+    }
+  }
+}

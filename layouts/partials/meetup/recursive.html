@@ -1,7 +1,9 @@
 {{ $child_pages := union .Sections .Pages }}
-<div>
+<div class="card-items">
     {{ range $child_pages.ByWeight }}
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        <p>{{ .Params.subtitle }}</p>
+        <div class="card-item">
+            <a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+            <p class="subtitle">{{ .Params.subtitle }}</p>
+        </div>
     {{ end }}
 </div>
