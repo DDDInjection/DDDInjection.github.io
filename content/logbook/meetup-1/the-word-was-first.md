@@ -7,7 +7,7 @@ author:
 weight: 1
 ---
 
-{{< youtube id="t-FZ6cHPSVA" title="Вначале было слово" >}}
+{{< youtube id="t-FZ6cHPSVA" title="В начале было слово" >}}
 {{< presentation "Презентация" "https://drive.google.com/open?id=1L7s2QnKWsQ-MVXPCzZXiCoZhkDf6F_85" >}}
 
 ### Материалы по теме
