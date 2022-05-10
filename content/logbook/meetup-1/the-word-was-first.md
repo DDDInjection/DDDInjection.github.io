@@ -8,7 +8,7 @@ weight: 1
 ---
 
 {{< youtube id="t-FZ6cHPSVA" title="В начале было слово" >}}
-{{< presentation "Презентация" "https://drive.google.com/open?id=1L7s2QnKWsQ-MVXPCzZXiCoZhkDf6F_85" >}}
+{{< presentation name="Презентация" url="https://drive.google.com/open?id=1L7s2QnKWsQ-MVXPCzZXiCoZhkDf6F_85" >}}
 
 ### Материалы по теме
 
