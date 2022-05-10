@@ -28,15 +28,12 @@ a {
   color: $text-color;
 }
 
-.external-link {
-  margin-right: 8px;
-  position: relative;
-  display: inline-block;
-
+a.external-link {
   &:after {
     content: '\2192';
-    position: absolute;
+    display: inline-block;
     font-size: $font-size;
+    margin-left: 2px;
     font-weight: 300;
     left: 100%;
     top: 4px;
@@ -46,10 +43,11 @@ a {
     text-align: right;
     line-height: 6px;
     text-indent: -11px;
-    margin: 0;
     opacity: .7;
     transform: rotate(-45deg);
     transition: opacity .16s ease-in;
+    vertical-align: super;
+    text-decoration: none;
   }
 }
 

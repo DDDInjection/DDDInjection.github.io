@@ -24,10 +24,24 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-import { header } from './ui/header';
-import { makeLinksExternal } from './ui/links';
+'use strict';
 
-window.onload = function() {
-    header();
-    makeLinksExternal();
-};
+/**
+ * Makes links that lead to other sites external.
+ *
+ * Adds the `external-link` class to every outbound link on the site.
+ * Also, adds `target="_blank"` attribute that opens markdown links in the new
+ * browser tab.
+ *
+ * <p>The CSS will add a small arrow after the link.
+ */
+export function makeLinksExternal() {
+    var links = document.getElementsByTagName("a");
+    for (var i = 0, length = links.length; i < length; i++) {
+        var value = links[i].hostname && links[i].hostname !== location.hostname;
+        if (value) {
+            links[i].classList.add('external-link');
+            links[i].setAttribute('target', '_blank');
+        }
+    }
+}
