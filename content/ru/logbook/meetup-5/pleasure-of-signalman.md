@@ -10,9 +10,9 @@ weight: 1
 {{< youtube id="kQLax2llW5I" title="Отрада сигнальщика" >}}
 {{< presentation name="Презентация" url="https://drive.google.com/file/d/1ZKuOzWR8YDqVf6pK5lZzqUSVI-Hniyh7/view?usp=sharing" >}}
 
-#### Материалы по теме
+### Материалы по теме
 
-### Статьи
+#### Статьи
 - [Protobuf — не только сериализация. Генерация кода и другие прикладные аспекты](https://dou.ua/lenta/articles/protobuf-guide/) \
   Наш опыт работы с&nbsp;Protobuf, его возможности, полезные для широкого круга проектов, и&nbsp;для
   DDD-проектов в&nbsp;частности.
