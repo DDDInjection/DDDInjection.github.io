@@ -4,6 +4,15 @@
         <h1>{{ .Title }}</h1>
         <p class="date">{{ .Params.date_ru }}</p>
     </div>
+    {{ if isset .Params "image" }}
+        {{ $img_path := path.Join "images/logbook/meetup/" .Params.image }}
+        {{ with resources.Get $img_path }}
+            <img src="{{ .RelPermalink }}"
+                 class="meetup-image"
+                 width="640"
+                 alt>
+        {{ end }}
+    {{ end }}
     {{ range .Pages.ByWeight }}
         <div class="meetup-container" id="{{ .File.BaseFileName }}">
             <div class="author">
