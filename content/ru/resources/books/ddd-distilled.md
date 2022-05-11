@@ -1,8 +1,8 @@
 ---
-name: Domain-Driven Design Distilled
-photo: books/ddd-distilled.png
-bookUrl: https://www.informit.com/store/domain-driven-design-distilled-9780134434988
-bookAuthor: Vaughn Vernon
+name: Предметно-ориентированное программирование
+photo: books/ddd-distilled-ru.png
+bookUrl: https://www.amazon.com/Proektirovanie-i-arhitektura-programmnogo-obespecheniya/dp/599084638X
+bookAuthor: Вон Вернон
 weight: 4
 ---
 

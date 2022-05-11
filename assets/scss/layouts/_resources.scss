@@ -12,6 +12,28 @@
       padding: 0;
       margin-bottom: 6px;
     }
+
+    .title-link {
+      text-decoration: none;
+
+      &:hover {
+        color: $main-brand-color;
+        text-decoration: underline;
+      }
+
+      .name {
+        margin-bottom: 2px;
+      }
+
+      .sub-name {
+        margin-bottom: 2px;
+      }
+    }
+
+    .book-author {
+      color: $light-gray;
+      margin-bottom: 12px;
+    }
   }
 
   .social-networks {
