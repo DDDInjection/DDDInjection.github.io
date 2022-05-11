@@ -1,14 +1,16 @@
 {{ define "main" }}
-<div class="content-holder page-content logbook">
+<div class="content-holder page-content list-page">
     <div class="page-header">
-        {{ with resources.Get "images/logbook/logbook-header.svg" }}
-            <img alt="Logbook" height="177" src="{{ .RelPermalink }}" width="260">
+        {{ $img_path := path.Join "images/list/" .Params.imageMain }}
+        {{ $img_alt := .Title }}
+        {{ with resources.Get $img_path }}
+            <img src="{{ .RelPermalink }}" width="260" height="177" alt="{{ $img_alt }}">
         {{ end }}
         <h1>{{ .Title }}</h1>
         <p class="subtitle">{{ .Params.subtitle }}</p>
     </div>
-    {{ if (eq .Title "Судовой журнал") }}
-        <div class="meetup-list">
+    {{ if (eq .Title .Title) }}
+        <div class="list-holder">
             {{ range .Sections.ByTitle }}
                 <div class="list-card">
                     <a class="card-header" href="{{ .RelPermalink }}">
@@ -21,7 +23,7 @@
             {{ end }}
         </div>
     {{ else }}
-        <div class="meetup-list">
+        <div class="list-holder">
             {{ range .RegularPages }}
                 <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
             {{ end }}
