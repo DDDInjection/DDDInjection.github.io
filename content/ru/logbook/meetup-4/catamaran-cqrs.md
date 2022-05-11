@@ -27,7 +27,6 @@ weight: 2
   Microservices Architecture and Containers based Reference Application
 - [Merp](https://github.com/mastreeno/Merp) \
   An open source, event-based Micro ERP developed by Andrea Saltarello using ASP.NET Core 2.1
-- [A simple Todo application, a comparison on Traditional vs CQRS + ES architecture](https://www.bouvet.no/bouvet-deler/utbrudd/a-simple-todo-application-a-comparison-on-traditional-vs-cqrs-es-architecture)
 - [Messaging in CQRS with MassTransit](https://www.slideshare.net/GeorgeTourkas/messaging-in-cqrs-with-masstransit)
 
 #### Курсы
