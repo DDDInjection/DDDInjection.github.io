@@ -1,0 +1,37 @@
+{{ define "main" }}
+<div class="content-holder page-content resources">
+    <div class="page-header">
+        <h1>{{ .Title }}</h1>
+        <p class="subtitle">{{ .Params.subtitle }}</p>
+    </div>
+    <div class="resources-container">
+        {{ $pageClass := .Params.class }}
+        {{ range .Pages.ByWeight }}
+            <div class="resources-card {{ $pageClass }}" id="{{ .File.BaseFileName }}">
+                <div class="image">
+                    {{ $img_path := path.Join "images/resources/" .Params.photo }}
+                    {{ $img_alt := .Params.name }}
+                    {{ with resources.Get $img_path }}
+                        <img src="{{ .RelPermalink }}"
+                             class="photo"
+                             width="{{ .Width }}"
+                             height="{{ .Height }}"
+                             alt="{{ $img_alt }}">
+                    {{ end }}
+                </div>
+                <div class="info">
+                    <h4 class="name">{{ .Params.name }}</h4>
+                    {{ if isset .Params "social" }}
+                        <div class="social-networks">
+                            {{ range $socialType, $value := .Params.social }}
+                                <a href="{{ $value }}" class="{{ $socialType }}" target="_blank"></a>
+                            {{ end }}
+                        </div>
+                    {{ end }}
+                    {{ .Content }}
+                </div>
+            </div>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

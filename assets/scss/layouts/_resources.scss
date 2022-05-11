@@ -1,0 +1,41 @@
+.resources {
+  .resources-container {
+    max-width: $content-container;
+    margin: 0 auto;
+    padding-top: 64px;
+  }
+
+  .resources-card {
+    display: flex;
+    margin-bottom: 48px;
+
+    &.pioneers {
+      .image {
+        max-width: 110px;
+      }
+    }
+
+    .info {
+      padding-left: 24px;
+
+      .name {
+        padding: 0;
+        margin-bottom: 4px;
+      }
+    }
+
+    .social-networks {
+      margin-bottom: 3px;
+
+      a {
+        &:after {
+          content: '';
+          display: inline-block;
+          background-color: #cccccc;
+          width: $icon-size-s;
+          height: $icon-size-s;
+        }
+      }
+    }
+  }
+}
