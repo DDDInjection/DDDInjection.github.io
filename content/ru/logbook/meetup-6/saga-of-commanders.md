@@ -32,9 +32,9 @@ weight: 1
   Почему tuples — «зло» в общем случае. «Надгробье» на Кладбище идей Guava.
 
 #### Доклады
-- [Бермудский Агрегат. И спасение утопающих.](https://dddi.dev/meetup4#rec164546492)
-- [Projections. Как подстелить соломку заранее.](http://dddi.dev/meetup3#rec164546409)
-- [Отрада сигнальщика. Почему мы так часто говорим о Protobuf.](https://dddi.dev/meetup5#rec179286264)
+- [Бермудский Агрегат. И спасение утопающих.](/logbook/meetup-4/#bermuda-aggregate)
+- [Projections. Как подстелить соломку заранее.](/logbook/meetup-3/#projections)
+- [Отрада сигнальщика. Почему мы так часто говорим о Protobuf.](/logbook/meetup-5/#pleasure-of-signalman)
 
 #### Паттерны
 - [Process Manager at Enterprise Integration Patterns](https://www.enterpriseintegrationpatterns.com/patterns/messaging/ProcessManager.html) \
