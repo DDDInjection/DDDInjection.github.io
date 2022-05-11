@@ -32,7 +32,9 @@
                     {{ if (eq $pageClass "books") }}
                         <a href="{{ .Params.book_url }}" class="title-link" target="_blank">
                             <h4 class="name">{{ .Params.name }}</h4>
-                            <p class="sub-name">{{ .Params.sub_name }}</p>
+                            {{ if isset .Params "sub_name" }}
+                                <p class="sub-name">{{ .Params.sub_name }}</p>
+                            {{ end }}
                         </a>
                         <p class="book-author">{{ .Params.book_author }}</p>
                     {{ else }}
