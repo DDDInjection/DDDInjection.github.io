@@ -1,5 +1,5 @@
 ---
-title: «Отрада сигнальщика»
+title: Отрада сигнальщика
 subtitle: Почему мы так часто говорим о Protobuf.
 author: dashenkov
 weight: 1

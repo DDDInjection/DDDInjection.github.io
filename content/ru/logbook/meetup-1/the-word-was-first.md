@@ -1,5 +1,5 @@
 ---
-title: «В начале было слово»
+title: В начале было слово
 subtitle: Domain-Driven Design как идея и метод.
 author: yevsyukov
 weight: 1

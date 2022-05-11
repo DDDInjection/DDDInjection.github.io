@@ -1,5 +1,5 @@
 ---
-title: «Основано на реальных событиях»
+title: Основано на реальных событиях
 subtitle: Код на фактах.
 author: yevsyukov
 weight: 1

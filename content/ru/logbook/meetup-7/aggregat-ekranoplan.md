@@ -1,5 +1,5 @@
 ---
-title: «Агрегат–экраноплан»
+title: Агрегат–экраноплан
 subtitle: Полёт над саргассами сложности.
 author: yevsyukov
 weight: 1

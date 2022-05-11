@@ -1,5 +1,5 @@
 ---
-title: «Value Objects»
+title: Value Objects
 subtitle: Долой догадки.
 author: dashenkov
 weight: 1

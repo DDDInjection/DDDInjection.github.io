@@ -1,5 +1,5 @@
 ---
-title: «Катамаран CQRS»
+title: Катамаран CQRS
 subtitle: Инструкция к монтажу, оснастке и управлению.
 author: beloborodov
 weight: 2

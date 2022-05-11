@@ -1,5 +1,5 @@
 ---
-title: «Бермудский Агрегат»
+title: Бермудский Агрегат
 subtitle: И спасение утопающих.
 author: yevsyukov
 weight: 1

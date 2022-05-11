@@ -1,5 +1,5 @@
 ---
-title: «Суп из пакетика»
+title: Суп из пакетика
 subtitle: и Винегрет из типов и их методов на второе.
 author: tymchenko
 weight: 1

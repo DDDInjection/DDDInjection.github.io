@@ -1,5 +1,5 @@
 ---
-title: «Как только — так сразу»
+title: Как только — так сразу
 subtitle: Моделирование процессов.
 author: tymchenko
 weight: 2

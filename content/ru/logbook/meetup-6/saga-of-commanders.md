@@ -1,5 +1,5 @@
 ---
-title: «Сага о командорах»
+title: Сага о командорах
 subtitle: Trust the process.
 author: tymchenko
 weight: 1

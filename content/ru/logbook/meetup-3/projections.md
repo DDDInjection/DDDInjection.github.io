@@ -1,5 +1,5 @@
 ---
-title: «Projections»
+title: Projections
 subtitle: Как подстелить соломку заранее.
 author: tymchenko
 weight: 3

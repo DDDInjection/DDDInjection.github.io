@@ -1,5 +1,5 @@
 ---
-title: «Сущности и репозитории»
+title: Сущности и репозитории
 subtitle: Слон помнит все.
 author: yevsyukov
 weight: 2
