@@ -11,11 +11,11 @@
     </div>
     {{ if (eq .Title .Title) }}
         <div class="list-holder">
-            {{ range .Sections.ByTitle }}
+            {{ range .Sections.ByWeight }}
                 <div class="list-card">
                     <a class="card-header" href="{{ .RelPermalink }}">
                         <h3 class="title">{{ .Title }}</h3>
-                        <p class="date">{{ .Params.date_ru }}</p>
+                        <p class="subtitle">{{ .Params.subtitle }}</p>
                         <i class="arrow-icon"></i>
                     </a>
                     {{ partial "meetup/recursive.html" . }}
