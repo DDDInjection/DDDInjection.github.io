@@ -24,7 +24,9 @@
                     {{ if isset .Params "social" }}
                         <div class="social-networks">
                             {{ range $socialType, $value := .Params.social }}
-                                <a href="{{ $value }}" class="{{ $socialType }}" target="_blank"></a>
+                                <a href="{{ $value }}"
+                                   class="{{ $socialType }}"
+                                   target="_blank"></a>
                             {{ end }}
                         </div>
                     {{ end }}

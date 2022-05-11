@@ -20,20 +20,46 @@
 
       .name {
         padding: 0;
-        margin-bottom: 4px;
+        margin-bottom: 6px;
       }
     }
 
     .social-networks {
-      margin-bottom: 3px;
+      margin-bottom: 2px;
 
       a {
+        margin-right: 8px;
+
         &:after {
           content: '';
           display: inline-block;
-          background-color: #cccccc;
-          width: $icon-size-s;
-          height: $icon-size-s;
+          width: $icon-size-s - 2px;
+          height: $icon-size-s - 2px;
+          opacity: .3;
+        }
+
+        &:hover {
+          &:after {
+            opacity: .54;
+          }
+        }
+
+        &.website {
+          &:after {
+            background: url("/images/icons/globe.svg") no-repeat;
+          }
+        }
+
+        &.github {
+          &:after {
+            background: url("/images/icons/github.svg") no-repeat;
+          }
+        }
+
+        &.twitter {
+          &:after {
+            background: url("/images/icons/twitter.svg") no-repeat;
+          }
         }
       }
     }
