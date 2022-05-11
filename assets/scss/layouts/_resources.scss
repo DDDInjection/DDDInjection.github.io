@@ -5,66 +5,104 @@
     padding-top: 64px;
   }
 
-  .resources-card {
-    display: flex;
-    margin-bottom: 48px;
+  .info {
+    padding-left: 24px;
 
-    &.pioneers {
-      .image {
-        max-width: 110px;
-
-        img {
-          border-radius: 50%;
-        };
-      }
+    .name {
+      padding: 0;
+      margin-bottom: 6px;
     }
+  }
 
-    .info {
-      padding-left: 24px;
+  .social-networks {
+    margin-bottom: 2px;
 
-      .name {
-        padding: 0;
-        margin-bottom: 6px;
+    a {
+      margin-right: 8px;
+
+      &:after {
+        content: '';
+        display: inline-block;
+        width: $icon-size-s - 2px;
+        height: $icon-size-s - 2px;
+        opacity: .3;
       }
-    }
 
-    .social-networks {
-      margin-bottom: 2px;
-
-      a {
-        margin-right: 8px;
-
+      &:hover {
         &:after {
-          content: '';
-          display: inline-block;
-          width: $icon-size-s - 2px;
-          height: $icon-size-s - 2px;
-          opacity: .3;
+          opacity: .54;
         }
+      }
 
-        &:hover {
-          &:after {
-            opacity: .54;
-          }
+      &.website {
+        &:after {
+          background: url("/images/icons/globe.svg") no-repeat;
         }
+      }
 
-        &.website {
-          &:after {
-            background: url("/images/icons/globe.svg") no-repeat;
-          }
+      &.github {
+        &:after {
+          background: url("/images/icons/github.svg") no-repeat;
         }
+      }
 
-        &.github {
-          &:after {
-            background: url("/images/icons/github.svg") no-repeat;
-          }
+      &.twitter {
+        &:after {
+          background: url("/images/icons/twitter.svg") no-repeat;
         }
+      }
+    }
+  }
+}
 
-        &.twitter {
-          &:after {
-            background: url("/images/icons/twitter.svg") no-repeat;
-          }
-        }
+.resources-card {
+  display: flex;
+  margin-bottom: 64px;
+
+  &.pioneers {
+    .image {
+      max-width: 110px;
+
+      img {
+        border-radius: 50%;
+      };
+    }
+  }
+
+  &.books {
+    $book-width: 142px;
+    $book-height: 190px;
+    $book-size-mobile: 60px;
+    $book-shadow: 0 1px 0 0 #D0D0D0,
+    0 10px 0 -4px #DEDEDE,
+    0 11px 0 -4px #D0D0D0,
+    0 11px 20px -4px rgba(black, .16);
+    .book {
+      display: block;
+      position: relative;
+      width: $book-width;
+      height: $book-height;
+      box-shadow: $book-shadow;
+
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 1px;
+        height: 6px;
+        background: #D0D0D0;
+        bottom: -7px;
+        left: 2px;
+        float: left;
+        transform: skewX(40deg);
+      }
+
+      @include breakpoint(xmd-phone) {
+        width: $book-size-mobile;
+      }
+
+      img {
+        padding: 0;
       }
     }
   }
