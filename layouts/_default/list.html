@@ -1,10 +1,12 @@
 {{ define "main" }}
 <div class="content-holder page-content list-page">
     <div class="page-header">
-        {{ $img_path := path.Join "images/list/" .Params.imageMain }}
-        {{ $img_alt := .Title }}
-        {{ with resources.Get $img_path }}
-            <img src="{{ .RelPermalink }}" width="260" height="177" alt="{{ $img_alt }}">
+        {{ if isset .Params "image" }}
+            {{ $img_path := path.Join "images/list/" .Params.image }}
+            {{ $img_alt := .Title }}
+            {{ with resources.Get $img_path }}
+                <img src="{{ .RelPermalink }}" width="260" height="177" alt="{{ $img_alt }}">
+            {{ end }}
         {{ end }}
         <h1>{{ .Title }}</h1>
         <p class="subtitle">{{ .Params.subtitle }}</p>
