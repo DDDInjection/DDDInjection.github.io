@@ -62,3 +62,11 @@
     }
   }
 }
+
+.list-holder {
+  &.resources {
+    .list-card {
+      margin-bottom: 16px;
+    }
+  }
+}

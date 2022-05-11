@@ -10,7 +10,7 @@
         <p class="subtitle">{{ .Params.subtitle }}</p>
     </div>
     {{ if (eq .Title .Title) }}
-        <div class="list-holder">
+        <div class="list-holder {{ .Section }}">
             {{ range .Sections.ByWeight }}
                 <div class="list-card">
                     <a class="card-header" href="{{ .RelPermalink }}">
