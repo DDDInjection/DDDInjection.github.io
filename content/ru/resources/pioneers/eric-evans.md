@@ -2,7 +2,7 @@
 name: Эрик Эванс
 photo: pioneers/eric-evans.png
 social:
-  website: https://domainlanguage.com/
+  a_website: https://domainlanguage.com/
   twitter: https://twitter.com/ericevans0
 weight: 1
 ---
