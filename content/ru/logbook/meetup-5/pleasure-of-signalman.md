@@ -36,7 +36,7 @@ weight: 1
   Плагин, позволяющий перейти на gRPC, не теряя существующие REST-клиенты.
 
 #### Примеры
-- [Spine Event Engine](https://github.com/grpc-ecosystem/grpc-gateway) \
+- [Spine Event Engine](https://spine.io/) \
   Наш фреймворк для создания реактивных DDD&nbsp;систем, в&nbsp;коде которого можно посмотреть, как
   на&nbsp;практике реализованы подходы, описанные в&nbsp;докладе 
   и&nbsp;[простые примеры приложений](https://github.com/spine-examples) на&nbsp;базе фреймворка.

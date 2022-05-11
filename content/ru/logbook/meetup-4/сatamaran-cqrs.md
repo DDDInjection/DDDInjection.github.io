@@ -15,11 +15,6 @@ weight: 2
 #### Статьи
 - [Command and Query Responsibility Segregation (CQRS) pattern](https://docs.microsoft.com/en-us/azure/architecture/patterns/cqrs)
 - [Data Consistency Primer](https://docs.microsoft.com/en-us/previous-versions/msp-n-p/dn589800(v=pandp.10))
-- 
-
-#### Книги
-- [Eric Evans "Domain-Driven Design: Tackling Complexity in the Heart of Software"](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215)
-- [Vaughn Vernon "Implementing Domain-Driven Design"](http://www.informit.com/store/implementing-domain-driven-design-9780133039894)
 - [CRUD, only when you can afford it (Revisited)](https://docs.microsoft.com/en-us/archive/blogs/maarten_mullender/crud-only-when-you-can-afford-it-revisited)
 - [Command and Querry Responsibility Segregation (CQRS) на практике](https://blog.byndyu.ru/2014/07/command-and-query-responsibility.html)
 - [Переход от монолитной архитектуры к распределенной](https://blog.byndyu.ru/2014/05/blog-post.html)
@@ -32,7 +27,7 @@ weight: 2
   Пример проекта, приведенный в докладе
 - [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) \
   Microservices Architecture and Containers based Reference Application
-- [Merp](https://github.com/mastreeno/Merp)
+- [Merp](https://github.com/mastreeno/Merp) \
   An open source, event-based Micro ERP developed by Andrea Saltarello using ASP.NET Core 2.1
 - [A simple Todo application, a comparison on Traditional vs CQRS + ES architecture](https://www.bouvet.no/bouvet-deler/utbrudd/a-simple-todo-application-a-comparison-on-traditional-vs-cqrs-es-architecture)
 - [Messaging in CQRS with MassTransit](https://www.slideshare.net/GeorgeTourkas/messaging-in-cqrs-with-masstransit)
