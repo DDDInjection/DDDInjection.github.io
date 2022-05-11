@@ -6,11 +6,12 @@
     </div>
     {{ if isset .Params "image" }}
         {{ $img_path := path.Join "images/logbook/meetup/" .Params.image }}
+        {{ $img_alt := .Title }}
         {{ with resources.Get $img_path }}
             <img src="{{ .RelPermalink }}"
                  class="meetup-image"
                  width="640"
-                 alt>
+                 alt="{{ $img_alt }}">
         {{ end }}
     {{ end }}
     {{ range .Pages.ByWeight }}
