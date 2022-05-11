@@ -1,9 +1,7 @@
 ---
 title: «Основано на реальных событиях»
 subtitle: Код на фактах.
-author:
-  name: Александр Евсюков
-  photo: yevsyukov.png
+author: yevsyukov
 weight: 1
 ---
 

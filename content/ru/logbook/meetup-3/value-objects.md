@@ -1,9 +1,7 @@
 ---
 title: «Value Objects»
 subtitle: Долой догадки.
-author:
-  name: Дмитрий Дашенков
-  photo: dashenkov.png
+author: dashenkov
 weight: 1
 ---
 

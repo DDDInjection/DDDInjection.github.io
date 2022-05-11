@@ -1,9 +1,7 @@
 ---
 title: «Projections»
 subtitle: Как подстелить соломку заранее.
-author:
-  name: Алексей Тимченко
-  photo: tymchenko.png
+author: tymchenko
 weight: 3
 ---
 

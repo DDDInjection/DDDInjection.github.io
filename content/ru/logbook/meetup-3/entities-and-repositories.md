@@ -1,9 +1,7 @@
 ---
 title: «Сущности и репозитории»
 subtitle: Слон помнит все.
-author:
-  name: Александр Евсюков
-  photo: yevsyukov.png
+author: yevsyukov
 weight: 2
 ---
 

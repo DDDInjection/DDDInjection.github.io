@@ -1,9 +1,7 @@
 ---
 title: «Суп из пакетика»
 subtitle: и Винегрет из типов и их методов на второе.
-author:
-  name: Алексей Тимченко
-  photo: tymchenko.png
+author: tymchenko
 weight: 1
 ---
 

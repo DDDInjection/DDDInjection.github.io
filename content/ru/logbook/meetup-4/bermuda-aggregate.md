@@ -1,9 +1,7 @@
 ---
 title: «Бермудский Агрегат»
 subtitle: И спасение утопающих.
-author:
-  name: Александр Евсюков
-  photo: yevsyukov.png
+author: yevsyukov
 weight: 1
 ---
 

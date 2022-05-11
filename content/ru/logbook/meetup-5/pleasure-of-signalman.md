@@ -1,9 +1,7 @@
 ---
 title: «Отрада сигнальщика»
 subtitle: Почему мы так часто говорим о Protobuf.
-author:
-  name: Дмитрий Дашенков
-  photo: dashenkov.png
+author: dashenkov
 weight: 1
 ---
 

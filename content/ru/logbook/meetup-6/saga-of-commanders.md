@@ -1,9 +1,7 @@
 ---
 title: «Сага о командорах»
 subtitle: Trust the process.
-author:
-  name: Алексей Тимченко
-  photo: tymchenko.png
+author: tymchenko
 weight: 1
 ---
 

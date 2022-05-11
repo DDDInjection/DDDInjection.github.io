@@ -1,9 +1,7 @@
 ---
 title: «Как только — так сразу»
 subtitle: Моделирование процессов.
-author:
-  name: Алексей Тимченко
-  photo: tymchenko.png
+author: tymchenko
 weight: 2
 ---
 

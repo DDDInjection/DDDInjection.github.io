@@ -1,9 +1,7 @@
 ---
 title: «Катамаран CQRS»
 subtitle: Инструкция к монтажу, оснастке и управлению.
-author:
-  name: Александр Белобородов
-  photo: beloborodov.png
+author: beloborodov
 weight: 2
 ---
 
