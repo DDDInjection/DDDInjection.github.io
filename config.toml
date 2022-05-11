@@ -1,3 +1,6 @@
 baseURL = 'https://dddinjection.github.io/'
-languageCode = 'en-us'
+languageCode = 'ru-ru'
 title = 'Domain-Driven Design Injection'
+
+defaultContentLanguage = 'ru'
+disableLanguages = ['ua']

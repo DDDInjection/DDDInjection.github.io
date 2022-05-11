@@ -4,22 +4,35 @@
         <h1>{{ .Title }}</h1>
         <p class="date">{{ .Params.date_ru }}</p>
     </div>
+    {{ if isset .Params "image" }}
+        {{ $img_path := path.Join "images/logbook/meetup/" .Params.image }}
+        {{ $img_alt := .Title }}
+        {{ with resources.Get $img_path }}
+            <img src="{{ .RelPermalink }}"
+                 class="meetup-image"
+                 width="640"
+                 alt="{{ $img_alt }}">
+        {{ end }}
+    {{ end }}
     {{ range .Pages.ByWeight }}
         <div class="meetup-container" id="{{ .File.BaseFileName }}">
             <div class="author">
+                {{ $author := index .Site.Data.authors (.Params.author) }}
                 <div class="photo">
-                    {{ $author_name := .Params.author.name }}
-                    {{ $photo_path := path.Join "images/logbook/authors/" .Params.author.photo }}
-                    {{ with resources.Get $photo_path }}
-                        <img alt="{{ $author_name }}"
-                             src="{{ .RelPermalink }}"
-                             class="photo"
-                             height="84"
-                             width="84">
+                    {{ if $author }}
+                        {{ with resources.Get $author.photoUrl }}
+                            <img alt="{{ $author.name }}"
+                                 src="{{ .RelPermalink }}"
+                                 class="photo"
+                                 height="84"
+                                 width="84">
+                        {{ end }}
                     {{ end }}
                 </div>
                 <div class="info">
-                    <p class="name"><b>{{ $author_name }}</b></p>
+                    {{ if $author }}
+                        <p class="name"><b>{{ $author.name }}</b></p>
+                    {{ end }}
                     <h2>{{ .Title }}</h2>
                     <p class="subtitle">{{ .Params.subtitle }}</p>
                 </div>

@@ -1,0 +1,34 @@
+[[main]]
+  name = "Палуба"
+  url = "/ua/"
+  weight = 1
+
+[[main]]
+  name = "Судовий журнал"
+  url = "/ua/logbook/"
+  weight = 2
+
+[[main]]
+  name = "Путівники"
+  url = "/ua/resources/"
+  weight = 3
+
+[[main]]
+  name = "Кают-компанія"
+  url = "https://messroom.dddi.dev/"
+  weight = 4
+
+[[social]]
+  name = "Telegram"
+  url = "https://t.me/DDDInjection"
+  weight = 1
+
+[[social]]
+  name = "Twitter"
+  url = "https://twitter.com/DDDInjection"
+  weight = 2
+
+[[social]]
+  name = "Meetup"
+  url = "https://www.meetup.com/Domain-Driven-Design-Injection"
+  weight = 3

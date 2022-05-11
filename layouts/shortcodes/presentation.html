@@ -1,4 +1,6 @@
-<a class="presentation-link external-link" {{ with .Get "url" }} href="{{ . }}"{{ end }} target="_blank">
+<a class="presentation-link external-link"
+   target="_blank"
+   {{ with .Get "url" }} href="{{ . }}"{{ end }}>
     <i class="icon"></i>
     <span>{{ .Get "name" }}</span>
 </a>

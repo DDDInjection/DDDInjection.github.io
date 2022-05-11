@@ -1,6 +1,14 @@
 .meetup {
+  $content-container: 640px;
+
+  .meetup-image {
+    display: block;
+    margin: 0 auto;
+    max-width: $content-container;
+  }
+
   .meetup-container {
-    max-width: 640px;
+    max-width: $content-container;
     margin: 0 auto;
     padding-top: 64px;
   }
@@ -14,8 +22,13 @@
     }
 
     .info {
-      h2 {
-        margin-bottom: 2px;
+      .name {
+        margin-bottom: 1px;
+      }
+
+      .name,
+      .subtitle {
+        font-size: $font-size;
       }
     }
   }
