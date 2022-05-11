@@ -1,4 +1,5 @@
 {{ $child_pages := union .Sections .Pages }}
+{{ if ge (len $child_pages) 1 }}
 <div class="card-items">
     {{ range $child_pages.ByWeight }}
         <div class="card-item">
@@ -8,3 +9,4 @@
         </div>
     {{ end }}
 </div>
+{{end}}
