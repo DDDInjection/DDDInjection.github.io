@@ -1,8 +1,8 @@
 ---
 name: Domain-Driven Design Reference
 photo: books/ddd-design-reference.png
-bookUrl: https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215
-bookAuthor: Eric Evans
+book_url: https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215
+book_author: Eric Evans
 weight: 2
 ---
 

@@ -1,8 +1,8 @@
 ---
 name: Предметно-ориентированное программирование
 photo: books/ddd-distilled-ru.png
-bookUrl: https://www.amazon.com/Proektirovanie-i-arhitektura-programmnogo-obespecheniya/dp/599084638X
-bookAuthor: Вон Вернон
+book_url: https://www.amazon.com/Proektirovanie-i-arhitektura-programmnogo-obespecheniya/dp/599084638X
+book_author: Вон Вернон
 weight: 4
 ---
 

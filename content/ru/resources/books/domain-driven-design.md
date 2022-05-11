@@ -1,9 +1,9 @@
 ---
 name: Domain-Driven Design
-subName: Tackling Complexity in the Heart of Software
+sub_name: Tackling Complexity in the Heart of Software
 photo: books/ddd-design.png
-bookUrl: https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215
-bookAuthor: Eric Evans
+book_url: https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215
+book_author: Eric Evans
 weight: 1
 ---
 

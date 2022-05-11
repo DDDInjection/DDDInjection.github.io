@@ -1,8 +1,8 @@
 ---
 name: Implementing Domain-Driven Design
 photo: books/implementing-ddd.png
-bookUrl: https://www.informit.com/store/implementing-domain-driven-design-9780133039894
-bookAuthor: Vaughn Vernon
+book_url: https://www.informit.com/store/implementing-domain-driven-design-9780133039894
+book_author: Vaughn Vernon
 weight: 3
 ---
 

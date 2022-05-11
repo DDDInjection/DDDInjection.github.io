@@ -11,7 +11,7 @@
                 <div class="image">
                     {{ $img_path := path.Join "images/resources/" .Params.photo }}
                     {{ $imgAlt := .Params.name }}
-                    {{ $bookUrl := .Params.bookUrl }}
+                    {{ $bookUrl := .Params.book_url }}
                     {{ with resources.Get $img_path }}
                         {{ if (eq $pageClass "books") }}
                             <a href="{{ $bookUrl }}" class="book" target="_blank">
@@ -30,11 +30,11 @@
                 </div>
                 <div class="info">
                     {{ if (eq $pageClass "books") }}
-                        <a href="{{ .Params.bookUrl }}" class="title-link" target="_blank">
+                        <a href="{{ .Params.book_url }}" class="title-link" target="_blank">
                             <h4 class="name">{{ .Params.name }}</h4>
-                            <p class="sub-name">{{ .Params.subName }}</p>
+                            <p class="sub-name">{{ .Params.sub_name }}</p>
                         </a>
-                        <p class="book-author">{{ .Params.bookAuthor }}</p>
+                        <p class="book-author">{{ .Params.book_author }}</p>
                     {{ else }}
                         <h4 class="name">{{ .Params.name }}</h4>
                     {{ end }}

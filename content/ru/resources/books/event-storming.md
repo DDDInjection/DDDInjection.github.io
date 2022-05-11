@@ -1,9 +1,9 @@
 ---
 name: Introducing EventStorming
-subName: An act of deliberate collective learning
+sub_name: An act of deliberate collective learning
 photo: books/event-storming.png
-bookUrl: https://www.eventstorming.com/book/
-bookAuthor: Alberto Brandolini
+book_url: https://www.eventstorming.com/book/
+book_author: Alberto Brandolini
 weight: 5
 ---
 
