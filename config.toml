@@ -3,3 +3,4 @@ languageCode = 'ru-ru'
 title = 'Domain-Driven Design Injection'
 
 defaultContentLanguage = 'ru'
+disableLanguages = ['ua']
