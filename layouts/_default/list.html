@@ -11,25 +11,17 @@
         <h1>{{ .Title }}</h1>
         <p class="subtitle">{{ .Params.subtitle }}</p>
     </div>
-    {{ if (eq .Title .Title) }}
-        <div class="list-holder {{ .Section }}">
-            {{ range .Sections.ByWeight }}
-                <div class="list-card">
-                    <a class="card-header" href="{{ .RelPermalink }}">
-                        <h3 class="title">{{ .Title }}</h3>
-                        <p class="subtitle">{{ .Params.subtitle }}</p>
-                        <i class="arrow-icon"></i>
-                    </a>
-                    {{ partial "meetup/recursive.html" . }}
-                </div>
-            {{ end }}
-        </div>
-    {{ else }}
-        <div class="list-holder">
-            {{ range .RegularPages }}
-                <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
-            {{ end }}
-        </div>
-    {{ end }}
+    <div class="list-holder {{ .Section }}">
+        {{ range .Sections.ByWeight }}
+            <div class="list-card">
+                <a class="card-header" href="{{ .RelPermalink }}">
+                    <h3 class="title">{{ .Title }}</h3>
+                    <p class="subtitle">{{ .Params.subtitle }}</p>
+                    <i class="arrow-icon"></i>
+                </a>
+                {{ partial "meetup/recursive.html" . }}
+            </div>
+        {{ end }}
+    </div>
 </div>
 {{ end }}
