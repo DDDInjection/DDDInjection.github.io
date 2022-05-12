@@ -102,7 +102,8 @@
   &.books {
     $book-width: 142px;
     $book-height: 190px;
-    $book-size-mobile: 60px;
+    $book-width-mobile: 60px;
+    $book-height-mobile: 80px;
     $book-shadow: 0 1px 0 0 #D0D0D0,
                   0 10px 0 -4px #DEDEDE,
                   0 11px 0 -4px #D0D0D0,
@@ -117,7 +118,8 @@
       transition: all .2s ease;
 
       @include breakpoint(xmd-phone) {
-        width: $book-size-mobile;
+        width: $book-width-mobile;
+        height: $book-height-mobile;
       }
 
       &:hover {
