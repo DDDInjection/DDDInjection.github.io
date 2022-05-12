@@ -4,7 +4,7 @@
         <h1>{{ .Title }}</h1>
         <p class="subtitle">{{ .Params.subtitle }}</p>
     </div>
-    <div class="resources-container">
+    <div class="section-container">
         {{ .Content }}
         {{ partial "resources/link-back.html" (dict "link_href" "/resources" "link_name" "Вернуться к путеводителям") }}
     </div>

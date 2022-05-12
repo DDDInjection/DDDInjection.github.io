@@ -1,14 +1,4 @@
 .resources {
-  .resources-container {
-    max-width: $content-container;
-    margin: 0 auto;
-    padding-top: 64px;
-
-    @include breakpoint(md-phone) {
-      padding-top: 40px;
-    }
-  }
-
   .info {
     padding-left: 24px;
 
