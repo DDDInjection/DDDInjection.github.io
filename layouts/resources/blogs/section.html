@@ -1,11 +1,14 @@
 {{ define "main" }}
-<div class="content-holder page-content blogs">
+<div class="content-holder page-content resources blogs">
     <div class="page-header">
         <h1>{{ .Title }}</h1>
         <p class="subtitle">{{ .Params.subtitle }}</p>
     </div>
-    <div class="blog-container">
+    <div class="resources-container">
         {{ .Content }}
+        <a id="link-back" href="/resources">
+            <span>Вернуться к путеводителям</span>
+        </a>
     </div>
 </div>
 {{ end }}
