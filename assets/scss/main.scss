@@ -7,8 +7,9 @@
 @import "layouts/layout";
 @import "layouts/header";
 @import "layouts/footer";
-@import "layouts/logbook";
+@import "layouts/list-page";
 @import "layouts/meetup";
+@import "layouts/resources";
 
 @import "components/hero";
 @import "components/interactive-map";
@@ -16,3 +17,4 @@
 @import "components/presentation-link";
 @import "components/page-header";
 @import "components/list-card";
+@import "components/link-back";

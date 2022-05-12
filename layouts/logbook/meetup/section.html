@@ -2,7 +2,7 @@
 <div class="content-holder page-content meetup">
     <div class="page-header">
         <h1>{{ .Title }}</h1>
-        <p class="date">{{ .Params.date_ru }}</p>
+        <p class="subtitle">{{ .Params.subtitle }}</p>
     </div>
     {{ if isset .Params "image" }}
         {{ $img_path := path.Join "images/logbook/meetup/" .Params.image }}

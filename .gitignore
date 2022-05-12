@@ -1,5 +1,5 @@
 # Hugo cache files
-resources
+/resources
 public
 
 node_modules

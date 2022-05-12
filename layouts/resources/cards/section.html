@@ -1,0 +1,60 @@
+{{ define "main" }}
+<div class="content-holder page-content resources">
+    <div class="page-header">
+        <h1>{{ .Title }}</h1>
+        <p class="subtitle">{{ .Params.subtitle }}</p>
+    </div>
+    <div class="resources-container">
+        {{ $pageClass := .Params.class }}
+        {{ range .Pages.ByWeight }}
+            <div class="resources-card {{ $pageClass }}" id="{{ .File.BaseFileName }}">
+                <div class="image">
+                    {{ $img_path := path.Join "images/resources/" .Params.photo }}
+                    {{ $imgAlt := .Params.name }}
+                    {{ $bookUrl := .Params.book_url }}
+                    {{ with resources.Get $img_path }}
+                        {{ if (eq $pageClass "books") }}
+                            <a href="{{ $bookUrl }}" class="book" target="_blank">
+                                <img src="{{ .RelPermalink }}"
+                                     width="{{ .Width }}"
+                                     height="{{ .Height }}"
+                                     alt="{{ $imgAlt }}">
+                            </a>
+                        {{ else }}
+                            <img src="{{ .RelPermalink }}"
+                                 width="{{ .Width }}"
+                                 height="{{ .Height }}"
+                                 alt="{{ $imgAlt }}">
+                        {{ end }}
+                    {{ end }}
+                </div>
+                <div class="info">
+                    {{ if (eq $pageClass "books") }}
+                        <a href="{{ .Params.book_url }}" class="title-link" target="_blank">
+                            <h4 class="name">{{ .Params.name }}</h4>
+                            {{ if isset .Params "sub_name" }}
+                                <p class="sub-name">{{ .Params.sub_name }}</p>
+                            {{ end }}
+                        </a>
+                        <p class="book-author">{{ .Params.book_author }}</p>
+                    {{ else }}
+                        <h4 class="name">{{ .Params.name }}</h4>
+                    {{ end }}
+                    {{ if isset .Params "social" }}
+                        <div class="social-networks">
+                            {{ range $socialType, $value := .Params.social }}
+                                <a href="{{ $value }}"
+                                   class="{{ $socialType }}"
+                                   target="_blank"></a>
+                            {{ end }}
+                        </div>
+                    {{ end }}
+                    {{ .Content }}
+                </div>
+            </div>
+        {{ end }}
+        {{ .Content }}
+        {{ partial "resources/link-back.html" (dict "link_href" "/resources" "link_name" "Вернуться к путеводителям") }}
+    </div>
+</div>
+{{ end }}

@@ -1,9 +1,10 @@
 .list-card {
   $side-padding: 24px;
+  $arrow-icon-size: $icon-size-s;
   .card-header {
     position: relative;
     display: block;
-    padding: 8px $side-padding;
+    padding: 8px $side-padding + $arrow-icon-size 8px $side-padding;
     background-color: $gray-bg;
     text-decoration: none;
     border-radius: $border-radius-s;
@@ -23,7 +24,7 @@
       color: $main-brand-color;
     }
 
-    .date {
+    .subtitle {
       color: $light-gray;
     }
 
@@ -34,8 +35,8 @@
       top: 50%;
       transform: translateY(-50%);
       background: url("/images/icons/arrow.svg") no-repeat center/cover;
-      width: $icon-size-s;
-      height: $icon-size-s;
+      width: $arrow-icon-size;
+      height: $arrow-icon-size;
       vertical-align: middle;
       transition: transform 0.3s ease;
     }
@@ -59,6 +60,14 @@
       .subtitle {
         cursor: default;
       }
+    }
+  }
+}
+
+.list-holder {
+  &.resources {
+    .list-card {
+      margin-bottom: 16px;
     }
   }
 }

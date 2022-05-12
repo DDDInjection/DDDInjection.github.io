@@ -1,0 +1,175 @@
+.resources {
+  .resources-container {
+    max-width: $content-container;
+    margin: 0 auto;
+    padding-top: 64px;
+
+    @include breakpoint(md-phone) {
+      padding-top: 40px;
+    }
+  }
+
+  .info {
+    padding-left: 24px;
+
+    .name {
+      padding: 0;
+      margin-bottom: 6px;
+    }
+
+    .title-link {
+      text-decoration: none;
+
+      &:hover {
+        color: $main-brand-color;
+        text-decoration: underline;
+      }
+
+      .name {
+        margin-bottom: 2px;
+      }
+
+      .sub-name {
+        margin-bottom: 10px;
+      }
+    }
+
+    .book-author {
+      color: $light-gray;
+      margin-bottom: 12px;
+    }
+  }
+
+  .social-networks {
+    margin-bottom: 2px;
+
+    a {
+      margin-right: 8px;
+
+      &:after {
+        content: '';
+        display: inline-block;
+        width: $icon-size-s - 2px;
+        height: $icon-size-s - 2px;
+        opacity: .3;
+      }
+
+      &:hover {
+        &:after {
+          opacity: .54;
+        }
+      }
+
+      &.a_website {
+        &:after {
+          background: url("/images/icons/globe.svg") no-repeat;
+        }
+      }
+
+      &.github {
+        &:after {
+          background: url("/images/icons/github.svg") no-repeat;
+        }
+      }
+
+      &.twitter {
+        &:after {
+          background: url("/images/icons/twitter.svg") no-repeat;
+        }
+      }
+
+      &.external-link {
+        &:after {
+          transform: rotate(0);
+          line-height: 1;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  &.blogs {
+    .resources-container {
+      a {
+        font-size: $font-size-neutral + 2;
+        font-weight: 700;
+        text-decoration: none;
+        color: $main-brand-color;
+        margin-bottom: 2px;
+      }
+
+      ul li {
+        list-style: none;
+        padding-bottom: 32px;
+        line-height: 1.5;
+      }
+
+      .lang {
+        display: inline-block;
+        color: $light-gray;
+        margin-left: 2px;
+      }
+    }
+  }
+}
+
+.resources-card {
+  display: flex;
+  margin-bottom: 64px;
+
+  &.pioneers {
+    .image {
+      max-width: 110px;
+
+      img {
+        border-radius: 50%;
+      };
+    }
+  }
+
+  &.books {
+    $book-width: 142px;
+    $book-height: 190px;
+    $book-width-mobile: 60px;
+    $book-height-mobile: 80px;
+    $book-shadow: 0 1px 0 0 #D0D0D0,
+                  0 10px 0 -4px #DEDEDE,
+                  0 11px 0 -4px #D0D0D0,
+                  0 11px 20px -4px rgba(black, .16);
+    .book {
+      display: block;
+      position: relative;
+      width: $book-width;
+      height: $book-height;
+      box-shadow: $book-shadow;
+      transform: translateY(0);
+      transition: all .2s ease;
+
+      @include breakpoint(xmd-phone) {
+        width: $book-width-mobile;
+        height: $book-height-mobile;
+      }
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 1px;
+        height: 6px;
+        background: #D0D0D0;
+        bottom: -7px;
+        left: 2px;
+        float: left;
+        transform: skewX(40deg);
+      }
+
+      img {
+        padding: 0;
+      }
+    }
+  }
+}
