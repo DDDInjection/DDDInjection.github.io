@@ -42,7 +42,7 @@
     a {
       margin-right: 8px;
 
-      &:after {
+      &:before {
         content: '';
         display: inline-block;
         width: $icon-size-s - 2px;
@@ -51,34 +51,32 @@
       }
 
       &:hover {
-        &:after {
+        &:before {
           opacity: .54;
         }
       }
 
       &.a_website {
-        &:after {
+        &:before {
           background: url("/images/icons/globe.svg") no-repeat;
         }
       }
 
       &.github {
-        &:after {
+        &:before {
           background: url("/images/icons/github.svg") no-repeat;
         }
       }
 
       &.twitter {
-        &:after {
+        &:before {
           background: url("/images/icons/twitter.svg") no-repeat;
         }
       }
 
       &.external-link {
         &:after {
-          transform: rotate(0);
-          line-height: 1;
-          margin: 0;
+          display: none;
         }
       }
     }
