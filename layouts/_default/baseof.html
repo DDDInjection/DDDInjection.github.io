@@ -1,7 +1,18 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode | default "ru" }}" itemscope itemtype="https://schema.org/WebPage">
 {{ partial "head/head.html" . }}
-<body>
+{{ if eq .Kind "home" }}
+    {{ .Scratch.Set "class" "home" }}
+{{ else if eq .Kind "404" }}
+    {{ .Scratch.Set "class" "404-page" }}
+{{ else if eq .Kind "page" }}
+    {{ .Scratch.Set "class" .Type }}
+    {{ .Scratch.Add "class" " single" }}
+{{ else -}}
+    {{ $type := replace .Type "/" " " }}
+    {{ .Scratch.Set "class" $type }}
+{{ end -}}
+<body class="{{ .Scratch.Get "class" }}">
     <div class="wrapper">
         <div class="main">
             {{ partial "header/header.html" . }}
