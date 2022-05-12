@@ -90,6 +90,10 @@
         text-decoration: none;
         color: $main-brand-color;
         margin-bottom: 2px;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
 
       ul li {
