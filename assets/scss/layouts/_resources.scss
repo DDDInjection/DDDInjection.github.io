@@ -96,15 +96,25 @@
     $book-height: 190px;
     $book-size-mobile: 60px;
     $book-shadow: 0 1px 0 0 #D0D0D0,
-    0 10px 0 -4px #DEDEDE,
-    0 11px 0 -4px #D0D0D0,
-    0 11px 20px -4px rgba(black, .16);
+                  0 10px 0 -4px #DEDEDE,
+                  0 11px 0 -4px #D0D0D0,
+                  0 11px 20px -4px rgba(black, .16);
     .book {
       display: block;
       position: relative;
       width: $book-width;
       height: $book-height;
       box-shadow: $book-shadow;
+      transform: translateY(0);
+      transition: all .2s ease;
+
+      @include breakpoint(xmd-phone) {
+        width: $book-size-mobile;
+      }
+
+      &:hover {
+        transform: translateY(-5px);
+      }
 
       &:after {
         content: '';
@@ -117,10 +127,6 @@
         left: 2px;
         float: left;
         transform: skewX(40deg);
-      }
-
-      @include breakpoint(xmd-phone) {
-        width: $book-size-mobile;
       }
 
       img {
