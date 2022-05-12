@@ -54,9 +54,7 @@
             </div>
         {{ end }}
         {{ .Content }}
-        <a id="link-back" href="/resources">
-            <span>Вернуться к путеводителям</span>
-        </a>
+        {{ partial "resources/link-back.html" (dict "link_href" "/resources" "link_name" "Вернуться к путеводителям") }}
     </div>
 </div>
 {{ end }}
