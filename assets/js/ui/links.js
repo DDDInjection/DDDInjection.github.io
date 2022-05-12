@@ -36,8 +36,8 @@
  * <p>The CSS will add a small arrow after the link.
  */
 export function makeLinksExternal() {
-    const meetupContent = document.querySelector('.meetup');
-    const links = meetupContent.getElementsByTagName('a');
+    const content = document.querySelector('.meetup .resources');
+    const links = content.getElementsByTagName('a');
     for (var i = 0, length = links.length; i < length; i++) {
         var value = links[i].hostname && links[i].hostname !== location.hostname;
         if (value) {

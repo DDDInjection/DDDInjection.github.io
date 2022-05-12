@@ -4,6 +4,10 @@
   h1 {
     margin-bottom: 4px;
     cursor: default;
+
+    @include breakpoint(md-phone) {
+      font-size: $font-size-lg;
+    }
   }
 
   .subtitle {

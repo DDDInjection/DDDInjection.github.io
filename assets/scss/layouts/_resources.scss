@@ -73,6 +73,14 @@
           background: url("/images/icons/twitter.svg") no-repeat;
         }
       }
+
+      &.external-link {
+        &:after {
+          transform: rotate(0);
+          line-height: 1;
+          margin: 0;
+        }
+      }
     }
   }
 }
