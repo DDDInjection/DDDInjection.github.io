@@ -29,25 +29,37 @@ a {
 }
 
 a.external-link {
+  $icon-size: 8px;
+  $icon-margin: 3px;
+
+  position: relative;
+  margin-right: $icon-size + $icon-margin;
+
   &:after {
     content: '\2192';
+    position: absolute;
     display: inline-block;
-    font-size: $font-size;
-    margin-left: 2px;
-    font-weight: 300;
-    left: 100%;
-    top: 4px;
-    width: 8px;
-    height: 8px;
     overflow: hidden;
+    top: 4px;
+    font-size: $font-size;
+    font-weight: 300;
+    width: $icon-size;
+    height: $icon-size;
+    text-indent: - $icon-size;
     text-align: right;
-    line-height: 6px;
-    text-indent: -11px;
-    opacity: .7;
+    line-height: 4px;
+    opacity: .54;
+    margin-left: $icon-margin;
     transform: rotate(-45deg);
     transition: opacity .16s ease-in;
     vertical-align: super;
     text-decoration: none;
+  }
+
+  &:hover {
+    &:after {
+      opacity: .7;
+    }
   }
 }
 
