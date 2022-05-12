@@ -24,17 +24,19 @@
     }
   }
 
-  ul, ol {
-    padding-left: 16px;
+  .section-container {
+    ul, ol {
+      padding-left: 16px;
 
-    li {
-      line-height: 1.5;
-      padding-bottom: 16px;
-      padding-right: 5px;
+      li {
+        line-height: 1.5;
+        padding-bottom: 16px;
+        padding-right: 5px;
+      }
     }
-  }
 
-  p, li {
-    font-size: $font-size-neutral;
+    p, li {
+      font-size: $font-size-neutral;
+    }
   }
 }
