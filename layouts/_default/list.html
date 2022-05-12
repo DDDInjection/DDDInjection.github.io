@@ -11,7 +11,7 @@
         <h1>{{ .Title }}</h1>
         <p class="subtitle">{{ .Params.subtitle }}</p>
     </div>
-    <div class="list-holder {{ .Section }}">
+    <div class="list-holder">
         {{ range .Sections.ByWeight }}
             <div class="list-card">
                 <a class="card-header" href="{{ .RelPermalink }}">

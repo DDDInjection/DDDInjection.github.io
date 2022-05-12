@@ -8,10 +8,10 @@
 {{ else if eq .Kind "page" }}
     {{ .Scratch.Set "class" .Type }}
     {{ .Scratch.Add "class" " single" }}
-{{ else -}}
+{{ else }}
     {{ $type := replace .Type "/" " " }}
     {{ .Scratch.Set "class" $type }}
-{{ end -}}
+{{ end }}
 <body class="{{ .Scratch.Get "class" }}">
     <div class="wrapper">
         <div class="main">
