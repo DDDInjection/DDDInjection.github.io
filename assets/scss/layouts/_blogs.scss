@@ -1,0 +1,20 @@
+.blogs {
+  .blog-container {
+    max-width: $content-container;
+    margin: 0 auto;
+    padding-top: 64px;
+
+    a {
+      font-size: $font-size-neutral;
+      font-weight: 700;
+      text-decoration: none;
+      color: $main-brand-color;
+      margin-bottom: 2px;
+    }
+
+    ul li {
+      list-style: none;
+      padding-bottom: 24px;
+    }
+  }
+}

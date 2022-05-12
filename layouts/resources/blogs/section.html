@@ -1,0 +1,11 @@
+{{ define "main" }}
+<div class="content-holder page-content blogs">
+    <div class="page-header">
+        <h1>{{ .Title }}</h1>
+        <p class="subtitle">{{ .Params.subtitle }}</p>
+    </div>
+    <div class="blog-container">
+        {{ .Content }}
+    </div>
+</div>
+{{ end }}
