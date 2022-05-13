@@ -1,0 +1,22 @@
+<div class="next-prev-nav">
+    {{ $pages := .Scratch.Get "pages" }}
+    {{ .Scratch.Set "currentPosition" 0 }}
+    {{ .Scratch.Set "index" 0 }}
+    {{ range $pages }}
+        {{ if eq $ . }}
+            {{ .Scratch.Set "currentPosition" (.Scratch.Get "index") }}
+        {{ end }}
+        {{ $.Scratch.Add "index" 1 }}
+    {{ end }}
+
+    {{ $next := (index $pages (add (.Scratch.Get "currentPosition") 1)) }}
+    {{ $prev := (index $pages (sub (.Scratch.Get "currentPosition") 1)) }}
+
+    {{ with $prev }}
+        {{ partial "common/arrow-link.html" (dict "link_href" .Permalink "link_name" .Title "is_prev" "true") }}
+    {{ end }}
+
+    {{ with $next }}
+        {{ partial "common/arrow-link.html" (dict "link_href" .Permalink "link_name" .Title) }}
+    {{ end }}
+</div>
