@@ -1,6 +1,9 @@
+const autoprefixer = require('autoprefixer');
+const purgecss = require('@fullhuman/postcss-purgecss');
+
 module.exports = {
     plugins: [
-        require('autoprefixer'),
+        autoprefixer(),
         ...process.env.HUGO_ENVIRONMENT === 'production'
             ? [purgecss]
             : []
