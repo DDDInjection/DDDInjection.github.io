@@ -1,0 +1,74 @@
+$icon-offset: 4px;
+$arrow-icon-size: 20px;
+$text-offset: $arrow-icon-size + 8px;
+
+%arrow-icon {
+  content: '';
+  position: absolute;
+  top: 2px;
+  background: url("/images/icons/arrow.svg") no-repeat center/cover;
+  width: $arrow-icon-size;
+  height: $arrow-icon-size;
+  transition: transform .3s ease;
+}
+
+.arrow-link {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  font-size: $font-size;
+  color: $main-brand-color;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+
+  span {
+    vertical-align: middle;
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom-color .25s ease;
+  }
+
+  &:hover {
+    span {
+      border-bottom-color: $main-brand-color;
+    }
+  }
+
+  &.prev {
+    span {
+      margin-left: $text-offset;
+    }
+
+    &:before {
+      @extend %arrow-icon;
+      left: 0;
+      transform: translateX(0) rotate(180deg);
+    }
+
+    &:hover {
+      &:before {
+        transform: translateX(-$icon-offset) rotate(180deg);
+      }
+    }
+  }
+
+  &.next {
+    span {
+      margin-right: $text-offset;
+    }
+
+    &:after {
+      @extend %arrow-icon;
+      right: 0;
+      transform: translateX(0) rotate(0);
+    }
+
+    &:hover {
+      &:after {
+        transform: translateX($icon-offset) rotate(0);
+      }
+    }
+  }
+}

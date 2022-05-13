@@ -1,0 +1,10 @@
+.next-prev-nav {
+  display: flex;
+  justify-content: space-between;
+
+  .arrow-link {
+    &.next {
+      margin-left: auto;
+    }
+  }
+}

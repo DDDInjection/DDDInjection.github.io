@@ -42,5 +42,10 @@
             </div>
         </div>
     {{ end }}
+    <div class="section-container">
+        {{- $pages := (where .Site.Pages.ByWeight "Type" "logbook/meetup") }}
+        {{ .Scratch.Set "pages" $pages }}
+        {{ partial "common/next-prev-nav.html" . }}
+    </div>
 </div>
 {{ end }}

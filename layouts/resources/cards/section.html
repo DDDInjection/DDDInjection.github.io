@@ -1,5 +1,5 @@
 {{ define "main" }}
-<div class="content-holder page-content resources">
+<div class="content-holder page-content">
     <div class="page-header">
         <h1>{{ .Title }}</h1>
         <p class="subtitle">{{ .Params.subtitle }}</p>
@@ -54,7 +54,9 @@
             </div>
         {{ end }}
         {{ .Content }}
-        {{ partial "resources/link-back.html" (dict "link_href" "/resources" "link_name" "Вернуться к путеводителям") }}
+     </div>
+    <div class="section-container">
+        {{ partial "common/arrow-link.html" (dict "link_href" "/resources" "link_name" "Вернуться к путеводителям" "is_prev" "true") }}
     </div>
 </div>
 {{ end }}
