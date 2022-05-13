@@ -41,7 +41,6 @@ export function makeLinksExternal() {
     const isPageContent = document.getElementsByClassName(pageContentClass).length > 0;
     if (isPageContent) {
         const links = pageContent.getElementsByTagName('a');
-        console.log(links);
         if (links.length) {
             for (var i = 0, length = links.length; i < length; i++) {
                 var value = links[i].hostname && links[i].hostname !== location.hostname;
