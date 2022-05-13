@@ -1,3 +1,3 @@
 {{ $options := (dict "targetPath" "main.css" "outputStyle" "compressed" "includePaths" (slice "node_modules")) }}
-{{ $style := resources.Get "scss/main.scss" | toCSS $options | postCSS (dict "use" "autoprefixer") }}
+{{ $style := resources.Get "scss/main.scss" | toCSS $options | postCSS (dict "use" "autoprefixer") | fingerprint }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" crossorigin="anonymous">
