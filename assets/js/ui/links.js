@@ -29,18 +29,17 @@
 /**
  * Makes content links that lead to other sites external.
  *
- * <p>Adds the `external-link` class to every outbound link that is on the `meetup`
- * or `resources` page. Also, adds `target="_blank"` attribute that opens markdown
+ * <p>Adds the `external-link` class to every outbound link on the site.
+ * Also, adds `target="_blank"` attribute that opens markdown
  * links in the new browser tab.
  *
  * <p>The CSS will add a small arrow after the link.
  */
 export function makeLinksExternal() {
-    const isMeetupPage = document.body.classList.contains('meetup');
-    const isResourcesPage = document.body.classList.contains('resources');
-
-    if (isMeetupPage || isResourcesPage) {
-        const pageContent = document.querySelector('.page-content');
+    const pageContentClass = 'page-content';
+    const pageContent = document.querySelector('.' + pageContentClass);
+    const isPageContent = document.getElementsByClassName(pageContentClass).length > 0;
+    if (isPageContent) {
         const links = pageContent.getElementsByTagName('a');
         if (links.length) {
             for (var i = 0, length = links.length; i < length; i++) {
