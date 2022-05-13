@@ -54,7 +54,7 @@
             </div>
         {{ end }}
         {{ .Content }}
-        {{ partial "resources/link-back.html" (dict "link_href" "/resources" "link_name" "Вернуться к путеводителям") }}
+        {{ partial "common/arrow-link.html" (dict "link_href" "/resources" "link_name" "Вернуться к путеводителям" "is_prev" "true") }}
     </div>
 </div>
 {{ end }}
