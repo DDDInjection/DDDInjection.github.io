@@ -44,4 +44,14 @@ body {
 .page-content {
   padding-top: $header-height + 40px;
   padding-bottom: $header-height;
+
+  .section-container {
+    max-width: $content-container;
+    margin: 0 auto;
+    padding-top: 64px;
+
+    @include breakpoint(md-phone) {
+      padding-top: 40px;
+    }
+  }
 }

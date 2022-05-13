@@ -27,22 +27,28 @@
 'use strict';
 
 /**
- * Makes links that lead to other sites external.
+ * Makes content links that lead to other sites external.
  *
- * Adds the `external-link` class to every outbound link that is inside the `meetupContent`.
- * Also, adds `target="_blank"` attribute that opens markdown links in the new
- * browser tab.
+ * <p>Adds the `external-link` class to every outbound link on the site.
+ * Also, adds `target="_blank"` attribute that opens markdown
+ * links in the new browser tab.
  *
  * <p>The CSS will add a small arrow after the link.
  */
 export function makeLinksExternal() {
-    const content = document.querySelector('.meetup .resources');
-    const links = content.getElementsByTagName('a');
-    for (var i = 0, length = links.length; i < length; i++) {
-        var value = links[i].hostname && links[i].hostname !== location.hostname;
-        if (value) {
-            links[i].classList.add('external-link');
-            links[i].setAttribute('target', '_blank');
+    const pageContentClass = 'page-content';
+    const pageContent = document.querySelector('.' + pageContentClass);
+    const isPageContent = document.getElementsByClassName(pageContentClass).length > 0;
+    if (isPageContent) {
+        const links = pageContent.getElementsByTagName('a');
+        if (links.length) {
+            for (var i = 0, length = links.length; i < length; i++) {
+                var value = links[i].hostname && links[i].hostname !== location.hostname;
+                if (value) {
+                    links[i].classList.add('external-link');
+                    links[i].setAttribute('target', '_blank');
+                }
+            }
         }
     }
 }

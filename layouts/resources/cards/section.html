@@ -4,7 +4,7 @@
         <h1>{{ .Title }}</h1>
         <p class="subtitle">{{ .Params.subtitle }}</p>
     </div>
-    <div class="resources-container">
+    <div class="section-container">
         {{ $pageClass := .Params.class }}
         {{ range .Pages.ByWeight }}
             <div class="resources-card {{ $pageClass }}" id="{{ .File.BaseFileName }}">

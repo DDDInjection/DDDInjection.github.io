@@ -1,14 +1,4 @@
 .resources {
-  .resources-container {
-    max-width: $content-container;
-    margin: 0 auto;
-    padding-top: 64px;
-
-    @include breakpoint(md-phone) {
-      padding-top: 40px;
-    }
-  }
-
   .info {
     padding-left: 24px;
 
@@ -23,6 +13,12 @@
       &:hover {
         color: $main-brand-color;
         text-decoration: underline;
+      }
+
+      &.external-link {
+        &:after {
+          display: none;
+        }
       }
 
       .name {
@@ -46,7 +42,7 @@
     a {
       margin-right: 8px;
 
-      &:after {
+      &:before {
         content: '';
         display: inline-block;
         width: $icon-size-s - 2px;
@@ -55,47 +51,49 @@
       }
 
       &:hover {
-        &:after {
+        &:before {
           opacity: .54;
         }
       }
 
       &.a_website {
-        &:after {
+        &:before {
           background: url("/images/icons/globe.svg") no-repeat;
         }
       }
 
       &.github {
-        &:after {
+        &:before {
           background: url("/images/icons/github.svg") no-repeat;
         }
       }
 
       &.twitter {
-        &:after {
+        &:before {
           background: url("/images/icons/twitter.svg") no-repeat;
         }
       }
 
       &.external-link {
         &:after {
-          transform: rotate(0);
-          line-height: 1;
-          margin: 0;
+          display: none;
         }
       }
     }
   }
 
   &.blogs {
-    .resources-container {
+    .section-container {
       a {
         font-size: $font-size-neutral + 2;
         font-weight: 700;
         text-decoration: none;
         color: $main-brand-color;
         margin-bottom: 2px;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
 
       ul li {
