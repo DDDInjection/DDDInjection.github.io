@@ -84,28 +84,30 @@
 
   &.blogs {
     .section-container {
-      a {
-        font-size: $font-size-neutral + 2;
-        font-weight: 700;
-        text-decoration: none;
-        color: $main-brand-color;
-        margin-bottom: 2px;
+      &.content {
+        a {
+          font-size: $font-size-neutral + 2;
+          font-weight: 700;
+          text-decoration: none;
+          color: $main-brand-color;
+          margin-bottom: 2px;
 
-        &:hover {
-          text-decoration: underline;
+          &:hover {
+            text-decoration: underline;
+          }
         }
-      }
 
-      ul li {
-        list-style: none;
-        padding-bottom: 32px;
-        line-height: 1.5;
-      }
+        ul li {
+          list-style: none;
+          padding-bottom: 32px;
+          line-height: 1.5;
+        }
 
-      .lang {
-        display: inline-block;
-        color: $light-gray;
-        margin-left: 2px;
+        .lang {
+          display: inline-block;
+          color: $light-gray;
+          margin-left: 2px;
+        }
       }
     }
   }
