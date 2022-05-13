@@ -25,11 +25,20 @@ $text-offset: $arrow-icon-size + 8px;
 
   span {
     vertical-align: middle;
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom-color .25s ease;
+  }
+
+  &:hover {
+    span {
+      border-bottom-color: $main-brand-color;
+    }
   }
 
   &.prev {
     span {
-      padding-left: $text-offset;
+      margin-left: $text-offset;
     }
 
     &:before {
@@ -47,7 +56,7 @@ $text-offset: $arrow-icon-size + 8px;
 
   &.next {
     span {
-      padding-right: $text-offset;
+      margin-right: $text-offset;
     }
 
     &:after {
