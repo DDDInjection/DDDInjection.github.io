@@ -33,7 +33,9 @@
                     {{ if $author }}
                         <p class="name"><b>{{ $author.name }}</b></p>
                     {{ end }}
-                    <h2>{{ .Title }}</h2>
+                    <h2 data-title>{{ .Title }}
+                        {{ partial "common/anchor-icon.html"
+                        (dict "anchor" .File.BaseFileName ) }}</h2>
                     <p class="subtitle">{{ .Params.subtitle }}</p>
                 </div>
             </div>
