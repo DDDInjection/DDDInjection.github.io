@@ -8,6 +8,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+html {
+  scroll-padding-top: $header-height;
+  scroll-behavior: smooth;
+}
+
 .wrapper {
   min-height: 100%;
   display: flex;

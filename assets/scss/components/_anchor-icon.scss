@@ -1,0 +1,49 @@
+$anchor-icon-size: $icon-size-s;
+$anchor-icon-color: $link-color;
+$anchor-icon-opacity: .54;
+
+/* Prevents the icon from wrapping after text. */
+.nowrap-icon {
+  position: absolute;
+  display: inline;
+  white-space: nowrap;
+}
+
+.anchor-link-icon {
+  pointer-events: none;
+
+  &:after {
+    content: '';
+    display: inline-block;
+    mask: url('/images/icons/link.svg') no-repeat 50% 50%;
+    background-color: $anchor-icon-color;
+    width: $anchor-icon-size;
+    height: $anchor-icon-size;
+    opacity: 0;
+    vertical-align: middle;
+    margin-top: -2px;
+    transition: all .2s ease-in-out;
+  }
+}
+
+[anchor-title] {
+  position: relative;
+  cursor: default;
+  padding-right: $anchor-icon-size;
+
+  &:hover {
+    .anchor-link-icon {
+      pointer-events: auto;
+
+      &:after {
+        opacity: $anchor-icon-opacity;
+      }
+
+      &:hover {
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

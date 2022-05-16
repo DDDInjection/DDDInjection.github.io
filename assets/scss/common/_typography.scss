@@ -1,5 +1,10 @@
 a {
   color: $text-color;
+  transition: color .2s ease-in-out;
+
+  &:hover {
+    color: $link-color;
+  }
 }
 
 a.external-link {
