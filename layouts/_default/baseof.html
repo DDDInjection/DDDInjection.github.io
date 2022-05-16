@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default "ru" }}" itemscope itemtype="https://schema.org/WebPage">
+<html lang="{{ .Language.Lang | default "ru" }}" itemscope itemtype="https://schema.org/WebPage">
 {{ partial "head/head.html" . }}
 {{ if eq .Kind "home" }}
     {{ .Scratch.Set "class" "home" }}
