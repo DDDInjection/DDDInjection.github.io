@@ -10,6 +10,8 @@ $anchor-icon-opacity: .54;
 }
 
 .anchor-link-icon {
+  pointer-events: none;
+
   &:after {
     content: '';
     display: inline-block;
@@ -24,13 +26,15 @@ $anchor-icon-opacity: .54;
   }
 }
 
-[data-title] {
+[anchor-title] {
   position: relative;
   cursor: default;
   padding-right: $anchor-icon-size;
 
   &:hover {
     .anchor-link-icon {
+      pointer-events: auto;
+
       &:after {
         opacity: $anchor-icon-opacity;
       }
