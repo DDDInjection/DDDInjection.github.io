@@ -1,0 +1,7 @@
+<h{{ .Level }} id="{{ .Anchor | safeURL }}-{{ .Page.Weight }}" anchor-title>
+    {{ .Text | safeHTML }}
+    <span class="nowrap-icon">&nbsp;
+        <a class="anchor-link-icon"
+           href="#{{ .Anchor | safeURL }}-{{ .Page.Weight }}"></a>
+    </span>
+</h{{ .Level }}>
