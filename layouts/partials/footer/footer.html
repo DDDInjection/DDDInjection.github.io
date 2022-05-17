@@ -31,14 +31,14 @@
                 {{ with resources.Get "images/footer/icon-bottle.svg" }}
                     <img alt="Organizers icon" height="64" src="{{ .RelPermalink }}" width="64">
                 {{ end }}
-                <h3 class="title">Организаторы</h3>
+                <h3 class="title">{{ i18n "footer.organizers" }}</h3>
                 <p><a href="mailto:{{ $.Site.Params.email }}" target="_blank">{{ $.Site.Params.email }}</a></p>
             </div>
             <div class="col announcements">
                 {{ with resources.Get "images/footer/icon-speaker.svg" }}
                     <img alt="Organizers icon" height="64" src="{{ .RelPermalink }}" width="64">
                 {{ end }}
-                <h3 class="title">Анонсы</h3>
+                <h3 class="title">{{ i18n "footer.announcements" }}</h3>
                 {{ range .Site.Menus.social -}}
                     <p><a href="{{ .URL | relURL }}" target="_blank">{{ .Name }}</a></p>
                 {{ end -}}
@@ -47,8 +47,8 @@
                 {{ with resources.Get "images/footer/icon-semaphore.svg" }}
                     <img alt="Organizers icon" height="64" src="{{ .RelPermalink }}" width="64">
                 {{ end }}
-                <h3 class="title">DDDi форум</h3>
-                <p><a href="https://messroom.dddi.dev/">Кают-компания</a></p>
+                <h3 class="title">{{ i18n "footer.dddiForum" }}</h3>
+                <p><a href="https://messroom.dddi.dev/">{{ i18n "footer.messroom" }}</a></p>
             </div>
         </div>
     </div>
