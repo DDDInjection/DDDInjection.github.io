@@ -1,4 +1,4 @@
 <a class="arrow-link {{ if .is_prev }}prev{{ else }}next{{ end }}"
-   href="{{ .link_href }}">
+   href="{{ if .isRelURL }}{{ .link_href | relLangURL }}{{ else }}{{ .link_href }}{{ end }}">
     <span>{{ .link_name }}</span>
 </a>
