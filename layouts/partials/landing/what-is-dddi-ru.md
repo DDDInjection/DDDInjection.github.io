@@ -10,3 +10,5 @@ Domain-Driven Design Injection&nbsp;&mdash; инициатива для разр
 Никаких рекрутеров и&nbsp;агентств&nbsp;&mdash; только программисты.
 
 Встречи проходят онлайн. Материалы прошлых встреч храним в&nbsp;[Судовом журнале](/logbook).
+
+[Broken link in markdown](/sdkfhsjdfh)
