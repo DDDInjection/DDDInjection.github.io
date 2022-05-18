@@ -1,5 +1,6 @@
-DirectoryPath: "dist"
+DirectoryPath: ./public
 IgnoreDirectoryMissingTrailingSlash: true
 IgnoreInternalEmptyHash: true
 IgnoreURLs:
-  - "^https://twitter.com/"
+  - fonts.gstatic.com
+  - twitter.com

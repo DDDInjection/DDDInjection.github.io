@@ -38,7 +38,7 @@ jobs:
       - name: Build Hugo
         # Put the build output where the following steps can find it
         # GITHUB_WORKSPACE
-        run: hugo -d $GITHUB_WORKSPACE/dist
+        run: hugo -d $GITHUB_WORKSPACE/public
 
       - name: Test HTML
         continue-on-error: false
