@@ -1,16 +1,16 @@
 [[main]]
   name = "Палуба"
-  url = "/ua/"
+  url = "/"
   weight = 1
 
 [[main]]
   name = "Судовий журнал"
-  url = "/ua/logbook/"
+  url = "/logbook/"
   weight = 2
 
 [[main]]
   name = "Путівники"
-  url = "/ua/resources/"
+  url = "/resources/"
   weight = 3
 
 [[main]]

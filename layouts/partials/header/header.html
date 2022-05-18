@@ -22,7 +22,7 @@
                             {{ $isActive := or (eq $currentPage.RelPermalink .URL) }}
                             {{ $isActive = or $isActive (and (eq $itemUrlWithoutSlash $currentPage.Section)) }}
                             <li class="nav-item">
-                                <a class="{{ if $isActive }}active{{ end }}" href="{{ .URL | relURL }}">
+                                <a class="{{ if $isActive }}active{{ end }}" href="{{ .URL | relLangURL }}">
                                     <span>{{ .Name }}</span>
                                 </a>
                             </li>

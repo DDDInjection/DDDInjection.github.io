@@ -4,12 +4,16 @@
     margin: 0 auto;
     padding: 16px 0 80px;
 
-    .title {
+    h1 {
       text-align: center;
 
       @include breakpoint(md-phone) {
         text-align: left;
       }
+    }
+
+    p {
+      padding-bottom: 20px;
     }
   }
 }
