@@ -14,3 +14,7 @@ To build and launch the site on the local server:
 ```
 hugo server -D
 ```
+
+# Multilingual mode
+At the moment this functionality has been disabled for production. To enable it just 
+comment out the `disableLanguages` property in the `config.toml` file. 
