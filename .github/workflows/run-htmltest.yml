@@ -1,4 +1,4 @@
-name: run-htmltest
+name: Run htmltest
 
 on: pull_request
 
