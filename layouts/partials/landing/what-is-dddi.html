@@ -26,10 +26,6 @@
 
 <div class="content-holder what-is-dddi">
     <div class="section-text">
-        {{ if eq .Page.Lang "ru" }}
-            {{ partial "landing/what-is-dddi-ru.md" . | markdownify }}
-        {{ else if eq .Page.Lang "ua" }}
-            {{ partial "landing/what-is-dddi-ua.md" . | markdownify }}
-        {{ end }}
+        {{ partial "landing/what-is-dddi-ru.md" . | markdownify }}
     </div>
 </div>
