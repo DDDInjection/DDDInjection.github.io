@@ -2,5 +2,5 @@ DirectoryPath: ./public
 IgnoreDirectoryMissingTrailingSlash: true
 IgnoreInternalEmptyHash: true
 IgnoreURLs:
-  - fonts.gstatic.com
+  - fonts.googleapis.com
   - twitter.com
