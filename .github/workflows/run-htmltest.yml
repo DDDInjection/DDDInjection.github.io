@@ -8,17 +8,32 @@ jobs:
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
         with:
-          submodules: recursive # Fetch Hugo themes
-          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
+          submodules: recursive # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0        # Fetch all history for .GitInfo and .Lastmod
 
-      - name: Set up Hugo
+      - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: "latest"
+          hugo-version: 'latest'
           extended: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - run: npm ci
+      - run: hugo --minify
 
       - name: Build Hugo
         # Put the build output where the following steps can find it
