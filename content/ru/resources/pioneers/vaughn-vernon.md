@@ -8,4 +8,4 @@ weight: 2
 ---
 
 Программист, тренер. Автор книг «Implementing Domain-Driven Design» и «Domain-Driven Design
-Distilled». Основатель [Vlingo Platform](https://vlingo.io/).
+Distilled».

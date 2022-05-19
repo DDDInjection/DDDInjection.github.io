@@ -1,19 +1,17 @@
-name: Github Pages
+name: Run htmltest
 
-on:
-  push:
-    branches:
-      - main  # Set a branch to deploy
-  pull_request:
+on: pull_request
 
 jobs:
-  deploy:
-    runs-on: ubuntu-20.04
+  htmltest:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - uses: actions/checkout@v2
         with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+          submodules: recursive # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0        # Fetch all history for .GitInfo and .Lastmod
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -37,9 +35,13 @@ jobs:
       - run: npm ci
       - run: hugo --minify
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
+      - name: Build Hugo
+        # Put the build output where the following steps can find it
+        # GITHUB_WORKSPACE
+        run: hugo -d $GITHUB_WORKSPACE/public
+
+      - name: Test HTML
+        continue-on-error: false
+        uses: wjdp/htmltest-action@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          config: .htmltest.yml
