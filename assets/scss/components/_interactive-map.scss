@@ -34,7 +34,7 @@
     content: '';
     position: absolute;
     pointer-events: none;
-    background: url("/interactive-map/border.svg") no-repeat;
+    background: url("/images/interactive-map/border.svg") no-repeat;
     background-size: contain;
     width: 100%;
     height: 100%;
@@ -45,14 +45,14 @@
 
   @media (max-width: 986px) {
     .slider-container:after {
-      background: url("/interactive-map/border-mobile.svg") no-repeat;
+      background: url("/images/interactive-map/border-mobile.svg") no-repeat;
       background-size: contain;
     }
   }
 
   @media (max-width: 640px) {
     .slider-container:after {
-      background: url("/interactive-map/border-mobile-small.svg") no-repeat;
+      background: url("/images/interactive-map/border-mobile-small.svg") no-repeat;
       background-size: contain;
     }
   }
