@@ -1,10 +1,11 @@
 <div class="map-wrapper">
-    {{ $mapPath := path.Join "/static/images/interactive-map/maps/" .map }}
-    {{ $mapPathMobile := path.Join "/static/images/interactive-map/maps/" .map_mobile }}
+    {{ $mapPath := "/static/images/interactive-map/maps/" }}
+    {{ $map := path.Join $mapPath .map }}
+    {{ $mapMobile := path.Join $mapPath .map_mobile }}
     <div class="map">
-        {{ readFile $mapPath | safeHTML }}
+        {{ readFile $map | safeHTML }}
     </div>
     <div class="map-mobile">
-        {{ readFile $mapPathMobile | safeHTML }}
+        {{ readFile $mapMobile | safeHTML }}
     </div>
 </div>
