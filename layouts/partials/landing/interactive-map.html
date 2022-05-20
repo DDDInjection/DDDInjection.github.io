@@ -70,22 +70,8 @@
     </div>
     <div class="slider-container">
         <div class="owl-carousel">
-            <div class="map-wrapper">
-                <div class="map">
-                    {{ readFile "/static/images/interactive-map/maps/map1_desktop.svg" | safeHTML }}
-                </div>
-                <div class="map-mobile">
-                    {{ readFile "/static/images/interactive-map/maps/map1_mobile.svg" | safeHTML }}
-                </div>
-            </div>
-            <div class="map-wrapper">
-                <div class="map">
-                    {{ readFile "/static/images/interactive-map/maps/map2_desktop.svg" | safeHTML }}
-                </div>
-                <div class="map-mobile">
-                    {{ readFile "/static/images/interactive-map/maps/map2_mobile.svg" | safeHTML }}
-                </div>
-            </div>
+            {{ partial "landing/map-wrapper.html" (dict "map" "map1_desktop.svg" "map_mobile" "map1_mobile.svg") }}
+            {{ partial "landing/map-wrapper.html" (dict "map" "map2_desktop.svg" "map_mobile" "map2_mobile.svg") }}
         </div>
     </div>
 </div>
