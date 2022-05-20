@@ -12,8 +12,6 @@
   img {
     width: 100%;
     height: 100%;
-    -moz-user-select: none;
-    -webkit-user-select: none;
     user-select: none;
   }
 
@@ -57,65 +55,35 @@
     }
   }
 
-  /* Styles to insert iframe with a map. */
-  .map-wrapper {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 172.4%;
-  }
-
-  .map {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  @media only screen and (min-width: 986px) {
-    .map-wrapper {
-      padding-bottom: 61%; /* 800:483 Aspect Ratio (1600x966) */
-    }
-  }
-  /* End iframe styles. */
-
   .slider-navigation {
     position: relative;
     margin-bottom: 8px;
-  }
 
-  @media (max-width: 640px) {
-    .slider-navigation {
+    @media (max-width: 640px) {
       margin-bottom: 5%;
     }
   }
 
-  .slider-navigation .ribbon,
-  .slider-navigation .button-container,
-  .slider-navigation .globe-container {
-    max-width: 78%;
-    margin: 0 auto;
+  .slider-navigation {
+    .ribbon,
+    .button-container,
+    .globe-container {
+      max-width: 78%;
+      margin: 0 auto;
 
-  }
+      @media (max-width: 986px) {
+        max-width: 90%;
+      }
 
-  @media (max-width: 986px) {
-    .slider-navigation .ribbon,
-    .slider-navigation .button-container,
-    .slider-navigation .globe-container {
-      max-width: 90%;
-    }
-  }
-
-  @media (max-width: 640px) {
-    .slider-navigation .ribbon,
-    .slider-navigation .button-container,
-    .slider-navigation .globe-container {
-      max-width: 100%;
+      @media (max-width: 640px) {
+        max-width: 100%;
+      }
     }
 
-    .slider-navigation .button-container {
-      top: 78%;
+    .button-container {
+      @media (max-width: 640px) {
+        top: 78%;
+      }
     }
   }
 
@@ -186,7 +154,6 @@
   }
 
   .nav-buttons a:hover img {
-    -webkit-filter: invert(64%) sepia(62%) saturate(3577%) hue-rotate(188deg) brightness(96%) contrast(74%);
     filter: invert(64%) sepia(62%) saturate(3577%) hue-rotate(188deg) brightness(96%) contrast(74%);
   }
 
@@ -202,8 +169,6 @@
     position: relative;
     max-width: 23%;
     margin: 0 auto;
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
     transform-style: preserve-3d;
   }
 
@@ -230,8 +195,6 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
     backface-visibility: hidden;
     z-index: -1; /* Places the map under meridians */
   }
@@ -255,78 +218,38 @@
   }
 
   .meridian-1 {
-    -webkit-transform: rotateY(72deg);
-    -moz-transform: rotateY(72deg);
-    -o-transform: rotateY(72deg);
     transform: rotateY(72deg);
   }
 
   .meridian-2 {
-    -webkit-transform: rotateY(144deg);
-    -moz-transform: rotateY(144deg);
-    -o-transform: rotateY(144deg);
     transform: rotateY(144deg);
   }
 
   .meridian-3 {
-    -webkit-transform: rotateY(216deg);
-    -moz-transform: rotateY(216deg);
-    -o-transform: rotateY(216deg);
     transform: rotateY(216deg);
   }
 
   .meridian-4 {
-    -webkit-transform: rotateY(288deg);
-    -moz-transform: rotateY(288deg);
-    -o-transform: rotateY(288deg);
     transform: rotateY(288deg);
   }
 
   .meridian-5 {
-    -webkit-transform: rotateY(360deg);
-    -moz-transform: rotateY(360deg);
-    -o-transform: rotateY(360deg);
     transform: rotateY(360deg);
   }
 
   .rotated-meridians {
     position: absolute;
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
     transform-style: preserve-3d;
     width: 100%;
     height: 100%;
   }
 
   .rotated-meridians.rotate-forward {
-    -webkit-animation: rotateMeridiansForward .6s ease backwards;
-    -moz-animation: rotateMeridiansForward .6s ease backwards;
-    -ms-animation: rotateMeridiansForward .6s ease backwards;
-    -o-animation: rotateMeridiansForward .6s ease backwards;
     animation: rotateMeridiansForward .6s ease backwards;
   }
 
   .rotated-meridians.rotate-backward {
-    -webkit-animation: rotateMeridiansBackward .6s ease forwards;
-    -moz-animation: rotateMeridiansBackward .6s ease forwards;
-    -ms-animation: rotateMeridiansBackward .6s ease forwards;
-    -o-animation: rotateMeridiansBackward .6s ease forwards;
     animation: rotateMeridiansBackward .6s ease forwards;
-  }
-
-  @-webkit-keyframes rotateMeridiansForward {
-    0% {-webkit-transform: rotateY(0);}
-    100% {-webkit-transform: rotateY(72deg);}
-  }
-
-  @-moz-keyframes rotateMeridiansForward {
-    0% {-moz-transform: rotateY(0);}
-    100% {-moz-transform: rotateY(72deg);}
-  }
-
-  @-o-keyframes rotateMeridiansForward {
-    0% {-o-transform: rotateY(0);}
-    100% {-o-transform: rotateY(72deg);}
   }
 
   @keyframes rotateMeridiansForward {
@@ -334,23 +257,42 @@
     100% {transform: rotateY(72deg);}
   }
 
-  @-webkit-keyframes rotateMeridiansBackward {
-    0% {-webkit-transform: rotateY(0);}
-    100% {-webkit-transform: rotateY(-72deg);}
-  }
-
-  @-moz-keyframes rotateMeridiansBackward {
-    0% {-moz-transform: rotateY(0);}
-    100% {-moz-transform: rotateY(-72deg);}
-  }
-
-  @-o-keyframes rotateMeridiansBackward {
-    0% {-o-transform: rotateY(0);}
-    100% {-o-transform: rotateY(-72deg);}
-  }
-
   @keyframes rotateMeridiansBackward {
     0% {transform: rotateY(0);}
     100% {transform: rotateY(-72deg);}
+  }
+
+  .map-wrapper {
+    position: relative;
+    width: 100%;
+
+    .clickable {
+      path,
+      ellipse,
+      polygon {
+        transition: all .25s ease-in-out;
+        cursor: pointer;
+      }
+
+      &:hover {
+        path:not(.white),
+        ellipse:not(.white),
+        polygon:not(.white) {
+          fill: #0088cc !important;
+        }
+      }
+    }
+
+    @media only screen and (min-width: 891px) {
+      .map-mobile {
+        display: none;
+      }
+    }
+
+    @media only screen and (max-width: 890px) {
+      .map {
+        display: none;
+      }
+    }
   }
 }
