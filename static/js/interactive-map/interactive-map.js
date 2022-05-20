@@ -48,7 +48,7 @@ $(document).ready(function() {
     /**
      * Finds white elements and marks them with the class.
      *
-     * It is needed to make the element hover style but don't color it if its white.
+     * It is needed to make the element hover style but don't color it if it is white.
      */
     function findWhiteElements() {
         $('path').each(function () {

@@ -33,7 +33,6 @@
  * The `Owl Carousel 2` library information you can find
  * here https://owlcarousel2.github.io/OwlCarousel2/.
  */
-
 $(document).ready(function() {
     const $owl = $('.owl-carousel');
     const $rotatedMeridians = $('.rotated-meridians');
@@ -75,6 +74,7 @@ $(document).ready(function() {
 
     /**
      * Rotates meridians.
+     *
      * @param el an element that will be rotated.
      * @param className the class that will be added to the element.
      */
