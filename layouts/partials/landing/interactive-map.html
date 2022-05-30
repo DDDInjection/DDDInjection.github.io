@@ -31,17 +31,17 @@
     <div class="slider-navigation">
         <div class="ribbon">
             <picture>
-                <source media="(min-width: 987px)" srcset="/interactive-map/header-ribbon.svg">
-                <source media="(min-width: 641px)" srcset="/interactive-map/header-ribbon-mobile.svg">
-                <img src="/interactive-map/header-ribbon-mobile-small.svg" alt="Header ribbon">
+                <source media="(min-width: 891px)" srcset="/images/interactive-map/header-ribbon.svg">
+                <source media="(min-width: 641px)" srcset="/images/interactive-map/header-ribbon-mobile.svg">
+                <img src="/images/interactive-map/header-ribbon-mobile-small.svg" alt="Header ribbon">
             </picture>
         </div>
         <div class="globe-container">
             <div class="globe">
                 <div class="globe-map">
                     <div class="owl-carousel">
-                        <img src="/interactive-map/globe-map-1.png" alt="map">
-                        <img src="/interactive-map/globe-map-2.png" alt="map">
+                        <img src="/images/interactive-map/globe-map-1.png" alt="map">
+                        <img src="/images/interactive-map/globe-map-2.png" alt="map">
                     </div>
                 </div>
                 <div class="rotated-meridians">
@@ -51,7 +51,7 @@
                     <div class="meridian-4"></div>
                     <div class="meridian-5"></div>
                 </div>
-                <img src="/interactive-map/horizontal-meridians.svg"
+                <img src="/images/interactive-map/horizontal-meridians.svg"
                      class="horizontal-meridians"
                      alt="Horizontal meridians">
                 <div class="meridian-0"></div>
@@ -60,89 +60,27 @@
         <div class="button-container">
             <div class="nav-buttons clearfix">
                 <a href="#" id="nav_prev" class="disabled">
-                    <img src="/interactive-map/left-hand.svg" alt="Left hand">
+                    <img src="/images/interactive-map/left-hand.svg" alt="Left hand">
                 </a>
                 <a href="#" id="nav_next">
-                    <img src="/interactive-map/right-hand.svg" alt="Right hand">
+                    <img src="/images/interactive-map/right-hand.svg" alt="Right hand">
                 </a>
             </div>
         </div>
     </div>
     <div class="slider-container">
         <div class="owl-carousel">
-            <div class="map-wrapper">
-                <iframe src="/interactive-map/map-1.html"
-                        class="map"
-                        width="100%"
-                        allowfullscreen
-                        frameBorder="0"
-                        title="DDDi Map Season 1">
-                </iframe>
-            </div>
-            <div class="map-wrapper">
-                <iframe src="/interactive-map/map-2.html"
-                        class="map"
-                        width="100%"
-                        allowfullscreen
-                        frameBorder="0"
-                        title="DDDi Map Season 2">
-                </iframe>
-            </div>
+            {{ partial "landing/map-wrapper.html" (dict "map" "map1_desktop.svg" "map_mobile" "map1_mobile.svg") }}
+            {{ partial "landing/map-wrapper.html" (dict "map" "map2_desktop.svg" "map_mobile" "map2_mobile.svg") }}
         </div>
     </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function() {
-        const $owl = $('.owl-carousel');
-        const $rotatedMeridians = $('.rotated-meridians');
-        const $btnPrev = $('#nav_prev');
-        const $btnNext = $('#nav_next');
+<script src="{{ "/js/interactive-map/map-carousel.js" | relURL }}"
+        type="text/javascript" defer></script>
+<script src="{{ "/js/interactive-map/interactive-map.js" | relURL }}"
+        type="text/javascript" defer></script>
 
-        $owl.owlCarousel({
-            loop: false,
-            nav: false,
-            dots: false,
-            smartSpeed: 600,
-            responsive: {
-                0: {
-                    items: 1,
-                }
-            },
-            onTranslated: (event) => onTranslated(event),
-        });
-
-        $btnPrev.click(function() {
-            $owl.trigger('prev.owl.carousel');
-            $btnPrev.addClass('not-clickable');
-            rotateMeridians($rotatedMeridians, 'rotate-backward');
-            return false; // Prevents from scrolling top.
-        });
-
-        $btnNext.click(function() {
-            $owl.trigger('next.owl.carousel');
-            $btnNext.addClass('not-clickable');
-            rotateMeridians($rotatedMeridians, 'rotate-forward');
-            return false; // Prevents from scrolling top.
-        });
-
-        function rotateMeridians(el, className) {
-            el.addClass(className);
-            el.one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(event) {
-                $(this).removeClass(className);
-            });
-        }
-
-        function onTranslated(event) {
-            $btnPrev.removeClass('disabled not-clickable');
-            $btnNext.removeClass('disabled not-clickable');
-            if (event.item.index === 0) {
-                $btnPrev.addClass('disabled');
-            }
-            if (event.item.index === event.item.count - 1) {
-                $btnNext.addClass('disabled');
-            }
-        }
-    });
-</script>
